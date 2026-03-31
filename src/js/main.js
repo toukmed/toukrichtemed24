@@ -637,3 +637,21 @@ function initTestimonialsSlider() {
   updateSlide();
   resetAutoplay();
 }
+
+// ─── Scroll to Top Button ────────────────────────
+(function() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', function() {
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+  });
+})();
