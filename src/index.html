@@ -22,7 +22,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Lucide Icons (lightweight) -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
@@ -37,17 +37,20 @@
   <nav class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">
-        <span class="navbar__logo-icon">MT</span>
-        <span class="navbar__logo-text">Mohamed Toukrichte</span>
+        <img src="images/logo.png" alt="Mohamed Toukrichte" class="navbar__logo-img" />
+        <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
       </a>
       <div class="navbar__links" id="navLinks">
-        <a href="#offre" class="navbar__link">Offre</a>
-        <a href="#inclus" class="navbar__link">Ce qui est inclus</a>
-        <a href="#processus" class="navbar__link">Processus</a>
-        <a href="#temoignages" class="navbar__link">Témoignages</a>
-        <a href="#faq" class="navbar__link">FAQ</a>
-        <a href="#contact" class="btn btn--sm btn--primary navbar__cta">Démarrer maintenant</a>
+        <a href="#offre" class="navbar__link" data-i18n="nav.offre">Offre</a>
+        <a href="#inclus" class="navbar__link" data-i18n="nav.inclus">Ce qui est inclus</a>
+        <a href="#processus" class="navbar__link" data-i18n="nav.processus">Processus</a>
+        <a href="#temoignages" class="navbar__link" data-i18n="nav.temoignages">Témoignages</a>
+        <a href="#faq" class="navbar__link" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="btn btn--sm btn--primary navbar__cta" data-i18n="nav.cta">Démarrer maintenant</a>
       </div>
+      <button class="lang-switch" id="langSwitch" aria-label="Changer de langue">
+        <span class="lang-switch__label">عربي</span>
+      </button>
       <button class="navbar__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -65,68 +68,72 @@
     </div>
     <div class="container hero__inner">
       <div class="hero__content" data-animate="fade-up">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          Disponible — Réponse en moins de 5 min
-        </div>
-        <h1 class="hero__title">
+        
+        <h1 class="hero__title" data-i18n-html="hero.title">
           Obtenez un site web<br />
           <span class="hero__title-gradient">professionnel en 7 jours</span><br />
           — sans stress
         </h1>
-        <p class="hero__subtitle">
+        <p class="hero__subtitle" data-i18n-html="hero.subtitle">
           Un site moderne, responsive et optimisé pour Google — livré clé en main
           pour <strong>5,000 DH tout compris</strong>. Hébergement et domaine de la première année inclus.
         </p>
         <div class="hero__cta-group">
-          <a href="https://wa.me/212XXXXXXXXX?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
             <i data-lucide="message-circle"></i>
-            Discuter sur WhatsApp
+            <span data-i18n="hero.whatsapp">Discuter sur WhatsApp</span>
           </a>
           <a href="#offre" class="btn btn--outline btn--lg">
-            Voir l'offre
+            <span data-i18n="hero.voirOffre">Voir l'offre</span>
             <i data-lucide="arrow-down"></i>
           </a>
+        </div>
+        <div class="hero__author">
+          <img src="images/mohamed-toukrichte-small.jpg" alt="Mohamed Toukrichte" class="hero__author-photo" />
+          <div class="hero__author-info">
+            <strong data-i18n="name">Mohamed Toukrichte</strong>
+            <span data-i18n="hero.authorRole">Ingénieur Logiciel — 10+ ans d'expérience</span>
+          </div>
         </div>
         <div class="hero__trust">
           <div class="hero__trust-item">
             <i data-lucide="zap"></i>
-            <span>Livraison 7 jours</span>
+            <span data-i18n="hero.trust1">Livraison 7 jours</span>
           </div>
           <div class="hero__trust-item">
             <i data-lucide="shield-check"></i>
-            <span>Satisfaction garantie</span>
+            <span data-i18n="hero.trust2">Satisfaction garantie</span>
           </div>
           <div class="hero__trust-item">
             <i data-lucide="star"></i>
-            <span>7+ ans d'expérience</span>
+            <span data-i18n="hero.trust3">10+ ans d'expérience</span>
           </div>
         </div>
       </div>
+    
       <div class="hero__visual" data-animate="fade-up" data-delay="200">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span data-i18n="hero.badge">Disponible — Réponse en moins de 5 min</span>
+        </div>
         <div class="hero__mockup">
           <div class="hero__mockup-browser">
             <div class="hero__mockup-dots">
               <span></span><span></span><span></span>
             </div>
-            <div class="hero__mockup-url">www.votre-entreprise.ma</div>
+            <div class="hero__mockup-url" >www.votre-entreprise.ma</div>
           </div>
           <div class="hero__mockup-screen">
-            <!-- Placeholder for site mockup image -->
-            <div class="hero__mockup-placeholder">
-              <i data-lucide="monitor"></i>
-              <span>Votre futur site web</span>
-              <small>Image à venir</small>
-            </div>
+            <img src="images/site-exemple.jpg" alt="Exemple de site web professionnel créé par Mohamed Toukrichte" class="hero__mockup-img" data-i18n-img="mockup" />
           </div>
         </div>
         <div class="hero__float-card hero__float-card--1" data-animate="float">
           <i data-lucide="smartphone"></i>
-          <span>100% Responsive</span>
+          <span data-i18n="hero.float1">100% Responsive</span>
         </div>
         <div class="hero__float-card hero__float-card--2" data-animate="float">
           <i data-lucide="trending-up"></i>
-          <span>SEO Optimisé</span>
+          <span data-i18n="hero.float2">SEO Optimisé</span>
         </div>
       </div>
     </div>
@@ -138,44 +145,44 @@
   <section class="problem" id="probleme">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">Le constat</span>
-        <h2 class="section-title">Votre entreprise mérite d'être visible en ligne</h2>
-        <p class="section-subtitle">En 2026, un client sur deux vous cherche sur Google avant de vous contacter. Sans site web, vous êtes invisible.</p>
+        <span class="section-tag" data-i18n="problem.tag">Le constat</span>
+        <h2 class="section-title" data-i18n="problem.title">Votre entreprise mérite d'être visible en ligne</h2>
+        <p class="section-subtitle" data-i18n="problem.subtitle">En 2026, un client sur deux vous cherche sur Google avant de vous contacter. Sans site web, vous êtes invisible.</p>
       </div>
 
       <div class="problem__grid">
         <div class="problem__col problem__col--pain" data-animate="fade-up">
           <h3 class="problem__col-title problem__col-title--pain">
             <i data-lucide="x-circle"></i>
-            Sans site web…
+            <span data-i18n="problem.painTitle">Sans site web…</span>
           </h3>
           <ul class="problem__list">
             <li>
               <i data-lucide="eye-off"></i>
               <div>
-                <strong>Invisibilité totale</strong>
-                <p>Vos concurrents récupèrent vos clients potentiels sur Google</p>
+                <strong data-i18n="problem.pain1Title">Invisibilité totale</strong>
+                <p data-i18n="problem.pain1Desc">Vos concurrents récupèrent vos clients potentiels sur Google</p>
               </div>
             </li>
             <li>
               <i data-lucide="thumbs-down"></i>
               <div>
-                <strong>Image non professionnelle</strong>
-                <p>Une simple page Facebook ne suffit plus pour inspirer confiance</p>
+                <strong data-i18n="problem.pain2Title">Image non professionnelle</strong>
+                <p data-i18n="problem.pain2Desc">Une simple page Facebook ne suffit plus pour inspirer confiance</p>
               </div>
             </li>
             <li>
               <i data-lucide="phone-off"></i>
               <div>
-                <strong>Clients perdus 24h/24</strong>
-                <p>Quand vous dormez, vos concurrents avec un site captent des leads</p>
+                <strong data-i18n="problem.pain3Title">Clients perdus 24h/24</strong>
+                <p data-i18n="problem.pain3Desc">Quand vous dormez, vos concurrents avec un site captent des leads</p>
               </div>
             </li>
             <li>
               <i data-lucide="ban"></i>
               <div>
-                <strong>Crédibilité limitée</strong>
-                <p>70% des clients ne font pas confiance à une entreprise sans site web</p>
+                <strong data-i18n="problem.pain4Title">Crédibilité limitée</strong>
+                <p data-i18n="problem.pain4Desc">70% des clients ne font pas confiance à une entreprise sans site web</p>
               </div>
             </li>
           </ul>
@@ -184,35 +191,35 @@
         <div class="problem__col problem__col--solution" data-animate="fade-up" data-delay="200">
           <h3 class="problem__col-title problem__col-title--solution">
             <i data-lucide="check-circle-2"></i>
-            Avec votre site web…
+            <span data-i18n="problem.solTitle">Avec votre site web…</span>
           </h3>
           <ul class="problem__list">
             <li>
               <i data-lucide="search"></i>
               <div>
-                <strong>Visible sur Google</strong>
-                <p>Vos clients vous trouvent facilement quand ils cherchent vos services</p>
+                <strong data-i18n="problem.sol1Title">Visible sur Google</strong>
+                <p data-i18n="problem.sol1Desc">Vos clients vous trouvent facilement quand ils cherchent vos services</p>
               </div>
             </li>
             <li>
               <i data-lucide="award"></i>
               <div>
-                <strong>Image professionnelle</strong>
-                <p>Un site moderne qui inspire confiance dès le premier regard</p>
+                <strong data-i18n="problem.sol2Title">Image professionnelle</strong>
+                <p data-i18n="problem.sol2Desc">Un site moderne qui inspire confiance dès le premier regard</p>
               </div>
             </li>
             <li>
               <i data-lucide="clock"></i>
               <div>
-                <strong>Disponible 24h/24</strong>
-                <p>Votre site travaille pour vous même quand vous êtes fermé</p>
+                <strong data-i18n="problem.sol3Title">Disponible 24h/24</strong>
+                <p data-i18n="problem.sol3Desc">Votre site travaille pour vous même quand vous êtes fermé</p>
               </div>
             </li>
             <li>
               <i data-lucide="trending-up"></i>
               <div>
-                <strong>Plus de clients</strong>
-                <p>Transformez les visiteurs en clients avec un site qui convertit</p>
+                <strong data-i18n="problem.sol4Title">Plus de clients</strong>
+                <p data-i18n="problem.sol4Desc">Transformez les visiteurs en clients avec un site qui convertit</p>
               </div>
             </li>
           </ul>
@@ -227,40 +234,40 @@
   <section class="offer" id="offre">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">L'offre</span>
-        <h2 class="section-title">Un site web complet, un prix transparent</h2>
-        <p class="section-subtitle">Pas de frais cachés, pas de surprises. Tout est inclus dans un forfait unique.</p>
+        <span class="section-tag" data-i18n="offer.tag">L'offre</span>
+        <h2 class="section-title" data-i18n="offer.title">Un site web complet, un prix transparent</h2>
+        <p class="section-subtitle" data-i18n="offer.subtitle">Pas de frais cachés, pas de surprises. Tout est inclus dans un forfait unique.</p>
       </div>
 
       <div class="offer__card" data-animate="fade-up">
-        <div class="offer__card-badge">Le plus populaire</div>
+        <div class="offer__card-badge" data-i18n="offer.badge">Le plus populaire</div>
         <div class="offer__card-header">
-          <h3 class="offer__card-name">Site Vitrine Professionnel</h3>
-          <p class="offer__card-desc">Tout ce dont votre entreprise a besoin pour briller en ligne</p>
+          <h3 class="offer__card-name" data-i18n="offer.cardName">Site Vitrine Professionnel</h3>
+          <p class="offer__card-desc" data-i18n="offer.cardDesc">Tout ce dont votre entreprise a besoin pour briller en ligne</p>
         </div>
         <div class="offer__card-price">
           <span class="offer__card-amount">5,000</span>
-          <span class="offer__card-currency">DH</span>
-          <span class="offer__card-period">tout compris</span>
+          <span class="offer__card-currency" data-i18n="currency">DH</span>
+          <span class="offer__card-period" data-i18n="offer.period">tout compris</span>
         </div>
         <ul class="offer__card-features">
-          <li><i data-lucide="check"></i> Site 5 à 7 pages personnalisées</li>
-          <li><i data-lucide="check"></i> Design moderne et responsive</li>
-          <li><i data-lucide="check"></i> Optimisé pour mobile et desktop</li>
-          <li><i data-lucide="check"></i> SEO de base inclus</li>
-          <li><i data-lucide="check"></i> Hébergement + domaine 1ère année</li>
-          <li><i data-lucide="check"></i> Bouton WhatsApp intégré</li>
-          <li><i data-lucide="check"></i> Google Maps + formulaire de contact</li>
-          <li><i data-lucide="check"></i> Google Analytics connecté</li>
-          <li><i data-lucide="check"></i> 2 révisions incluses</li>
-          <li><i data-lucide="check"></i> Livraison en 7 jours</li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f1">Site 5 à 7 pages personnalisées</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f2">Design moderne et responsive</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f3">Optimisé pour mobile et desktop</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f4">SEO de base inclus</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f5">Hébergement + domaine 1ère année</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f6">Bouton WhatsApp intégré</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f7">Google Maps + formulaire de contact</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f8">Google Analytics connecté</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f9">2 révisions incluses</span></li>
+          <li><i data-lucide="check"></i> <span data-i18n="offer.f10">Livraison en 7 jours</span></li>
         </ul>
         <div class="offer__card-cta">
-          <a href="https://wa.me/212XXXXXXXXX?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg btn--full" target="_blank" rel="noopener">
+          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg btn--full" target="_blank" rel="noopener">
             <i data-lucide="message-circle"></i>
-            Démarrer mon site maintenant
+            <span data-i18n="offer.cta">Démarrer mon site maintenant</span>
           </a>
-          <p class="offer__card-note">Paiement en 2 fois possible : 50% au démarrage, 50% à la livraison</p>
+          <p class="offer__card-note" data-i18n="offer.note">Paiement en 2 fois possible : 50% au démarrage, 50% à la livraison</p>
         </div>
       </div>
     </div>
@@ -272,51 +279,51 @@
   <section class="features" id="inclus">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">Détails</span>
-        <h2 class="section-title">Tout est inclus dans votre forfait</h2>
-        <p class="section-subtitle">Chaque fonctionnalité est pensée pour que votre site génère des résultats concrets.</p>
+        <span class="section-tag" data-i18n="features.tag">Détails</span>
+        <h2 class="section-title" data-i18n="features.title">Tout est inclus dans votre forfait</h2>
+        <p class="section-subtitle" data-i18n="features.subtitle">Chaque fonctionnalité est pensée pour que votre site génère des résultats concrets.</p>
       </div>
 
       <div class="features__grid">
         <div class="features__item" data-animate="fade-up">
           <div class="features__icon"><i data-lucide="layout"></i></div>
-          <h3>5 à 7 pages sur mesure</h3>
-          <p>Accueil, À propos, Services, Galerie, Contact — chaque page conçue pour convertir vos visiteurs en clients.</p>
+          <h3 data-i18n="features.h1">5 à 7 pages sur mesure</h3>
+          <p data-i18n="features.p1">Accueil, À propos, Services, Galerie, Contact — chaque page conçue pour convertir vos visiteurs en clients.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="100">
           <div class="features__icon"><i data-lucide="smartphone"></i></div>
-          <h3>Design responsive</h3>
-          <p>Votre site s'adapte parfaitement à tous les écrans — mobile, tablette et ordinateur. Mobile-first.</p>
+          <h3 data-i18n="features.h2">Design responsive</h3>
+          <p data-i18n="features.p2">Votre site s'adapte parfaitement à tous les écrans — mobile, tablette et ordinateur. Mobile-first.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="200">
           <div class="features__icon"><i data-lucide="search"></i></div>
-          <h3>SEO de base</h3>
-          <p>Meta tags, titres optimisés, descriptions — pour que Google vous trouve et vous positionne.</p>
+          <h3 data-i18n="features.h3">SEO de base</h3>
+          <p data-i18n="features.p3">Meta tags, titres optimisés, descriptions — pour que Google vous trouve et vous positionne.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="300">
           <div class="features__icon"><i data-lucide="message-circle"></i></div>
-          <h3>Bouton WhatsApp</h3>
-          <p>Un bouton flottant WhatsApp pour que vos clients vous contactent en un clic — le canal #1 au Maroc.</p>
+          <h3 data-i18n="features.h4">Bouton WhatsApp</h3>
+          <p data-i18n="features.p4">Un bouton flottant WhatsApp pour que vos clients vous contactent en un clic — le canal #1 au Maroc.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="400">
           <div class="features__icon"><i data-lucide="map-pin"></i></div>
-          <h3>Google Maps intégré</h3>
-          <p>Vos clients trouvent votre adresse facilement. Formulaire de contact fonctionnel inclus.</p>
+          <h3 data-i18n="features.h5">Google Maps intégré</h3>
+          <p data-i18n="features.p5">Vos clients trouvent votre adresse facilement. Formulaire de contact fonctionnel inclus.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="500">
           <div class="features__icon"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Google Analytics</h3>
-          <p>Suivez vos visiteurs, comprenez leur comportement et mesurez l'impact de votre site.</p>
+          <h3 data-i18n="features.h6">Google Analytics</h3>
+          <p data-i18n="features.p6">Suivez vos visiteurs, comprenez leur comportement et mesurez l'impact de votre site.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="600">
           <div class="features__icon"><i data-lucide="server"></i></div>
-          <h3>Hébergement inclus</h3>
-          <p>Hébergement rapide et sécurisé + nom de domaine — tout est inclus pour la première année.</p>
+          <h3 data-i18n="features.h7">Hébergement inclus</h3>
+          <p data-i18n="features.p7">Hébergement rapide et sécurisé + nom de domaine — tout est inclus pour la première année.</p>
         </div>
         <div class="features__item" data-animate="fade-up" data-delay="700">
           <div class="features__icon"><i data-lucide="refresh-cw"></i></div>
-          <h3>2 révisions</h3>
-          <p>Pas satisfait du premier rendu ? Deux cycles de révision sont inclus pour un résultat parfait.</p>
+          <h3 data-i18n="features.h8">2 révisions</h3>
+          <p data-i18n="features.p8">Pas satisfait du premier rendu ? Deux cycles de révision sont inclus pour un résultat parfait.</p>
         </div>
       </div>
     </div>
@@ -328,49 +335,49 @@
   <section class="process" id="processus">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">Comment ça marche</span>
-        <h2 class="section-title">De la prise de contact à la mise en ligne en 7 jours</h2>
-        <p class="section-subtitle">Un processus clair et transparent — vous savez exactement où en est votre projet.</p>
+        <span class="section-tag" data-i18n="process.tag">Comment ça marche</span>
+        <h2 class="section-title" data-i18n="process.title">De la prise de contact à la mise en ligne en 7 jours</h2>
+        <p class="section-subtitle" data-i18n="process.subtitle">Un processus clair et transparent — vous savez exactement où en est votre projet.</p>
       </div>
 
       <div class="process__timeline">
         <div class="process__step" data-animate="fade-up">
           <div class="process__step-number">01</div>
           <div class="process__step-content">
-            <h3>Prise de contact</h3>
-            <p>Envoyez-moi un message sur WhatsApp. On discute de votre projet, vos besoins, vos objectifs. C'est gratuit et sans engagement.</p>
+            <h3 data-i18n="process.h1">Prise de contact</h3>
+            <p data-i18n="process.p1">Envoyez-moi un message sur WhatsApp. On discute de votre projet, vos besoins, vos objectifs. C'est gratuit et sans engagement.</p>
           </div>
           <div class="process__step-icon"><i data-lucide="message-circle"></i></div>
         </div>
         <div class="process__step" data-animate="fade-up" data-delay="100">
           <div class="process__step-number">02</div>
           <div class="process__step-content">
-            <h3>Recueil du contenu</h3>
-            <p>Vous m'envoyez vos textes, photos, logo et informations. Je vous guide à chaque étape avec un questionnaire simple.</p>
+            <h3 data-i18n="process.h2">Recueil du contenu</h3>
+            <p data-i18n="process.p2">Vous m'envoyez vos textes, photos, logo et informations. Je vous guide à chaque étape avec un questionnaire simple.</p>
           </div>
           <div class="process__step-icon"><i data-lucide="clipboard-list"></i></div>
         </div>
         <div class="process__step" data-animate="fade-up" data-delay="200">
           <div class="process__step-number">03</div>
           <div class="process__step-content">
-            <h3>Création du design</h3>
-            <p>Je conçois votre site avec un design moderne et professionnel. Vous recevez une première version pour validation.</p>
+            <h3 data-i18n="process.h3">Création du design</h3>
+            <p data-i18n="process.p3">Je conçois votre site avec un design moderne et professionnel. Vous recevez une première version pour validation.</p>
           </div>
           <div class="process__step-icon"><i data-lucide="palette"></i></div>
         </div>
         <div class="process__step" data-animate="fade-up" data-delay="300">
           <div class="process__step-number">04</div>
           <div class="process__step-content">
-            <h3>Révisions</h3>
-            <p>Vous me donnez vos retours. J'applique les modifications jusqu'à ce que le résultat vous plaise — 2 révisions incluses.</p>
+            <h3 data-i18n="process.h4">Révisions</h3>
+            <p data-i18n="process.p4">Vous me donnez vos retours. J'applique les modifications jusqu'à ce que le résultat vous plaise — 2 révisions incluses.</p>
           </div>
           <div class="process__step-icon"><i data-lucide="pencil"></i></div>
         </div>
         <div class="process__step" data-animate="fade-up" data-delay="400">
           <div class="process__step-number">05</div>
           <div class="process__step-content">
-            <h3>Mise en ligne</h3>
-            <p>Votre site est publié, connecté à votre domaine, et prêt à accueillir vos premiers visiteurs. Vous payez le solde.</p>
+            <h3 data-i18n="process.h5">Mise en ligne</h3>
+            <p data-i18n="process.p5">Votre site est publié, connecté à votre domaine, et prêt à accueillir vos premiers visiteurs. Vous payez le solde.</p>
           </div>
           <div class="process__step-icon"><i data-lucide="rocket"></i></div>
         </div>
@@ -385,38 +392,33 @@
     <div class="container">
       <div class="about__inner" data-animate="fade-up">
         <div class="about__photo">
-          <!-- Placeholder for photo -->
-          <div class="about__photo-placeholder">
-            <i data-lucide="user"></i>
-            <small>Photo à venir</small>
-          </div>
+          <img src="images/mohamed-toukrichte.png" alt="Mohamed Toukrichte" class="about__photo-img" />
         </div>
         <div class="about__content">
-          <span class="section-tag">Qui suis-je</span>
-          <h2 class="about__title">Mohamed Toukrichte</h2>
-          <p class="about__role">Ingénieur Logiciel — 7+ ans d'expérience</p>
-          <p class="about__text">
-            Après plus de 7 ans d'expérience en développement logiciel au Canada, notamment
-            chez <strong>Ticketmaster</strong> (leader mondial de la billetterie), j'ai choisi de
-            revenir au Maroc avec une mission : aider les entrepreneurs et PME marocaines à se
+          <span class="section-tag" data-i18n="about.tag">Qui suis-je</span>
+          <h2 class="about__title" data-i18n="name">Mohamed Toukrichte</h2>
+          <p class="about__role" data-i18n="about.role">Ingénieur Logiciel — 10+ ans d'expérience</p>
+          <p class="about__text" data-i18n-html="about.text1">
+            Après plus de 10 ans d'expérience en développement logiciel au Maroc et à l'international, notamment
+            chez <strong>Ticketmaster</strong> (leader mondial de la billetterie), <strong>SFR</strong> (leader européen de télécommunication), j'ai choisi comme mission au Maroc : aider les entrepreneurs et PME marocaines à se
             digitaliser avec des sites web aux <strong>standards internationaux</strong>.
           </p>
-          <p class="about__text">
+          <p class="about__text" data-i18n="about.text2">
             Je combine expertise technique de haut niveau et compréhension du marché local pour
             vous livrer un site web qui inspire confiance et génère des résultats.
           </p>
           <div class="about__stats">
             <div class="about__stat">
-              <span class="about__stat-number">7+</span>
-              <span class="about__stat-label">Années d'expérience</span>
+              <span class="about__stat-number">10+</span>
+              <span class="about__stat-label" data-i18n="about.stat1">Années d'expérience</span>
             </div>
             <div class="about__stat">
               <span class="about__stat-number">30+</span>
-              <span class="about__stat-label">Projets livrés</span>
+              <span class="about__stat-label" data-i18n="about.stat2">Projets livrés</span>
             </div>
             <div class="about__stat">
               <span class="about__stat-number">100%</span>
-              <span class="about__stat-label">Clients satisfaits</span>
+              <span class="about__stat-label" data-i18n="about.stat3">Clients satisfaits</span>
             </div>
           </div>
         </div>
@@ -430,54 +432,74 @@
   <section class="testimonials" id="temoignages">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">Témoignages</span>
-        <h2 class="section-title">Ce que disent mes clients</h2>
-        <p class="section-subtitle">La satisfaction de mes clients est ma meilleure carte de visite.</p>
+        <span class="section-tag" data-i18n="testimonials.tag">Témoignages</span>
+        <h2 class="section-title" data-i18n="testimonials.title">Ce que disent mes clients</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">La satisfaction de mes clients est ma meilleure carte de visite.</p>
       </div>
 
-      <div class="testimonials__grid">
-        <div class="testimonials__card" data-animate="fade-up">
-          <div class="testimonials__stars">★★★★★</div>
-          <p class="testimonials__text">"Mohamed a créé notre site en 5 jours seulement. Le résultat est magnifique et nos clients nous trouvent maintenant facilement sur Google. Je recommande à 100%."</p>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar">
-              <!-- Placeholder avatar -->
-              <span>AK</span>
-            </div>
-            <div>
-              <strong>Ahmed K.</strong>
-              <span>Restaurant — Casablanca</span>
+      <div class="testimonials__slider" id="testimonialsSlider">
+        <div class="testimonials__track">
+          <div class="testimonials__card">
+            <div class="testimonials__stars">★★★★★</div>
+            <p class="testimonials__text" data-i18n="testimonials.t1">"Mohamed a créé notre site en 5 jours seulement. Le résultat est magnifique et nos clients nous trouvent maintenant facilement sur Google. Je recommande à 100%."</p>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
+              <div>
+                <strong data-i18n="testimonials.a1Name">Ahmed K.</strong>
+                <span data-i18n="testimonials.a1Role">Restaurant — Casablanca</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="testimonials__card" data-animate="fade-up" data-delay="100">
-          <div class="testimonials__stars">★★★★★</div>
-          <p class="testimonials__text">"Très professionnel et réactif. Mohamed comprend les besoins des entreprises marocaines. Notre site est moderne et nos clientes adorent pouvoir nous contacter via WhatsApp directement."</p>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar">
-              <span>SB</span>
-            </div>
-            <div>
-              <strong>Sara B.</strong>
-              <span>Salon de beauté — Rabat</span>
+          <div class="testimonials__card">
+            <div class="testimonials__stars">★★★★★</div>
+            <p class="testimonials__text" data-i18n="testimonials.t2">"Très professionnel et réactif. Mohamed comprend les besoins des entreprises marocaines. Notre site est moderne et nos clientes adorent pouvoir nous contacter via WhatsApp directement."</p>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
+              <div>
+                <strong data-i18n="testimonials.a2Name">Sara B.</strong>
+                <span data-i18n="testimonials.a2Role">Salon de beauté — Rabat</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="testimonials__card" data-animate="fade-up" data-delay="200">
-          <div class="testimonials__stars">★★★★★</div>
-          <p class="testimonials__text">"Excellent rapport qualité-prix. On a payé en deux fois, le site a été livré dans les temps. Depuis, on reçoit des demandes de rendez-vous directement via le site."</p>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar">
-              <span>YM</span>
+          <div class="testimonials__card">
+            <div class="testimonials__stars">★★★★★</div>
+            <p class="testimonials__text" data-i18n="testimonials.t3">"Excellent rapport qualité-prix. On a payé en deux fois, le site a été livré dans les temps. Depuis, on reçoit des demandes de rendez-vous directement via le site."</p>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
+              <div>
+                <strong data-i18n="testimonials.a3Name">Dr. Youssef M.</strong>
+                <span data-i18n="testimonials.a3Role">Cabinet dentaire — Marrakech</span>
+              </div>
             </div>
-            <div>
-              <strong>Dr. Youssef M.</strong>
-              <span>Cabinet dentaire — Marrakech</span>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__stars">★★★★★</div>
+            <p class="testimonials__text" data-i18n="testimonials.t4">"Mohamed a parfaitement compris notre métier. Le site de creatif-pro.com reflète notre savoir-faire en peinture industrielle, époxy et résine. Depuis la mise en ligne, on reçoit des demandes de devis de tout le Maroc. Travail impeccable."</p>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
+              <div>
+                <strong data-i18n="testimonials.a4Name">Abdeljalil</strong>
+                <span data-i18n="testimonials.a4Role">creatif-pro.com — Peinture industrielle, Époxy & Résine</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__stars">★★★★★</div>
+            <p class="testimonials__text" data-i18n="testimonials.t5">"On cherchait quelqu'un qui comprenne le secteur du BTP. Mohamed a livré un site professionnel pour entra-pt.com qui met en valeur nos réalisations. En 3 mois, on a doublé nos demandes de devis. Merci Mohamed !"</p>
+            <div class="testimonials__author">
+              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
+              <div>
+                <strong data-i18n="testimonials.a5Name">Othmane Jitto</strong>
+                <span data-i18n="testimonials.a5Role">entra-pt.com — Construction & BTP</span>
+              </div>
             </div>
           </div>
         </div>
+        <div class="testimonials__dots" id="testimonialsDots"></div>
       </div>
     </div>
   </section>
@@ -492,34 +514,34 @@
           <i data-lucide="shield-check"></i>
         </div>
         <div class="guarantee__content">
-          <h2>Votre satisfaction est garantie</h2>
+          <h2 data-i18n="guarantee.title">Votre satisfaction est garantie</h2>
           <div class="guarantee__points">
             <div class="guarantee__point">
               <i data-lucide="check-circle-2"></i>
               <div>
-                <strong>2 révisions incluses</strong>
-                <p>Pas satisfait du premier rendu ? Je modifie jusqu'à ce que le résultat vous plaise.</p>
+                <strong data-i18n="guarantee.p1Title">2 révisions incluses</strong>
+                <p data-i18n="guarantee.p1Desc">Pas satisfait du premier rendu ? Je modifie jusqu'à ce que le résultat vous plaise.</p>
               </div>
             </div>
             <div class="guarantee__point">
               <i data-lucide="check-circle-2"></i>
               <div>
-                <strong>Accompagnement personnalisé</strong>
-                <p>Je vous guide à chaque étape — pas de jargon technique, juste des résultats.</p>
+                <strong data-i18n="guarantee.p2Title">Accompagnement personnalisé</strong>
+                <p data-i18n="guarantee.p2Desc">Je vous guide à chaque étape — pas de jargon technique, juste des résultats.</p>
               </div>
             </div>
             <div class="guarantee__point">
               <i data-lucide="check-circle-2"></i>
               <div>
-                <strong>Support après livraison</strong>
-                <p>Une question après la mise en ligne ? Je reste disponible sur WhatsApp pour vous aider.</p>
+                <strong data-i18n="guarantee.p3Title">Support après livraison</strong>
+                <p data-i18n="guarantee.p3Desc">Une question après la mise en ligne ? Je reste disponible sur WhatsApp pour vous aider.</p>
               </div>
             </div>
             <div class="guarantee__point">
               <i data-lucide="check-circle-2"></i>
               <div>
-                <strong>Paiement sécurisé en 2 fois</strong>
-                <p>50% au démarrage, 50% à la livraison — vous ne payez le solde que quand vous êtes satisfait.</p>
+                <strong data-i18n="guarantee.p4Title">Paiement sécurisé en 2 fois</strong>
+                <p data-i18n="guarantee.p4Desc">50% au démarrage, 50% à la livraison — vous ne payez le solde que quand vous êtes satisfait.</p>
               </div>
             </div>
           </div>
@@ -534,69 +556,69 @@
   <section class="faq" id="faq">
     <div class="container">
       <div class="section-header" data-animate="fade-up">
-        <span class="section-tag">FAQ</span>
-        <h2 class="section-title">Questions fréquentes</h2>
-        <p class="section-subtitle">Tout ce que vous devez savoir avant de démarrer votre projet.</p>
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">Questions fréquentes</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">Tout ce que vous devez savoir avant de démarrer votre projet.</p>
       </div>
 
       <div class="faq__list" data-animate="fade-up">
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Pourquoi seulement 7 jours ?</span>
+            <span data-i18n="faq.q1">Pourquoi seulement 7 jours ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>Grâce à mon expérience et à un processus de travail optimisé, je peux créer votre site rapidement sans sacrifier la qualité. Le délai de 7 jours commence dès que je reçois tout votre contenu (textes, photos, logo). Plus vous êtes réactif, plus vite votre site sera en ligne.</p>
+            <p data-i18n="faq.a1">Grâce à mon expérience et à un processus de travail optimisé, je peux créer votre site rapidement sans sacrifier la qualité. Le délai de 7 jours commence dès que je reçois tout votre contenu (textes, photos, logo). Plus vous êtes réactif, plus vite votre site sera en ligne.</p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Est-ce que je dois fournir le contenu ?</span>
+            <span data-i18n="faq.q2">Est-ce que je dois fournir le contenu ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>Idéalement oui — vous connaissez mieux votre entreprise que quiconque. Mais ne vous inquiétez pas : je vous envoie un questionnaire simple pour vous guider. Si vous n'avez pas de photos professionnelles, je peux utiliser des images de qualité adaptées à votre secteur.</p>
+            <p data-i18n="faq.a2">Idéalement oui — vous connaissez mieux votre entreprise que quiconque. Mais ne vous inquiétez pas : je vous envoie un questionnaire simple pour vous guider. Si vous n'avez pas de photos professionnelles, je peux utiliser des images de qualité adaptées à votre secteur.</p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Est-ce que je peux modifier le site après la livraison ?</span>
+            <span data-i18n="faq.q3">Est-ce que je peux modifier le site après la livraison ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>Oui ! Après la livraison, vous pouvez demander des modifications mineures. Pour des changements réguliers, je propose un forfait maintenance à 500 DH/mois qui inclut les mises à jour, modifications et support prioritaire.</p>
+            <p data-i18n="faq.a3">Oui ! Après la livraison, vous pouvez demander des modifications mineures. Pour des changements réguliers, je propose un forfait maintenance à 500 DH/mois qui inclut les mises à jour, modifications et support prioritaire.</p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Que se passe-t-il après la 1ère année d'hébergement ?</span>
+            <span data-i18n="faq.q4">Que se passe-t-il après la 1ère année d'hébergement ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>L'hébergement et le domaine sont inclus pour la première année. Ensuite, le renouvellement est de 500 DH/an — un investissement minimal pour garder votre site en ligne 24h/24.</p>
+            <p data-i18n="faq.a4">L'hébergement et le domaine sont inclus pour la première année. Ensuite, le renouvellement est de 500 DH/an — un investissement minimal pour garder votre site en ligne 24h/24.</p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Comment se fait le paiement ?</span>
+            <span data-i18n="faq.q5">Comment se fait le paiement ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>Le paiement se fait en 2 fois : 50% au démarrage du projet (2,500 DH) et 50% à la livraison finale (2,500 DH). J'accepte le virement bancaire, CashPlus, Wafacash ou espèces avec reçu.</p>
+            <p data-i18n="faq.a5">Le paiement se fait en 2 fois : 50% au démarrage du projet (2,500 DH) et 50% à la livraison finale (2,500 DH). J'accepte le virement bancaire, CashPlus, Wafacash ou espèces avec reçu.</p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Mon site sera-t-il visible sur Google ?</span>
+            <span data-i18n="faq.q6">Mon site sera-t-il visible sur Google ?</span>
             <i data-lucide="chevron-down"></i>
           </button>
           <div class="faq__answer">
-            <p>Oui ! Le SEO de base est inclus : meta tags, titres optimisés, descriptions, et soumission à Google. Votre site sera indexé et commencera à apparaître dans les résultats de recherche. Pour un référencement avancé, des options supplémentaires sont disponibles.</p>
+            <p data-i18n="faq.a6">Oui ! Le SEO de base est inclus : meta tags, titres optimisés, descriptions, et soumission à Google. Votre site sera indexé et commencera à apparaître dans les résultats de recherche. Pour un référencement avancé, des options supplémentaires sont disponibles.</p>
           </div>
         </div>
       </div>
@@ -613,29 +635,29 @@
           <div class="cta-final__orb cta-final__orb--1"></div>
           <div class="cta-final__orb cta-final__orb--2"></div>
         </div>
-        <h2 class="cta-final__title">Prêt à lancer votre site web ?</h2>
-        <p class="cta-final__text">
+        <h2 class="cta-final__title" data-i18n="cta.title">Prêt à lancer votre site web ?</h2>
+        <p class="cta-final__text" data-i18n="cta.text">
           Rejoignez les entrepreneurs qui ont fait le choix de la visibilité en ligne.
           Votre site professionnel est à 7 jours de devenir réalité.
         </p>
         <div class="cta-final__price">
-          <span>À partir de</span>
-          <strong>5,000 DH</strong>
-          <span>tout compris</span>
+          <span data-i18n="cta.priceFrom">À partir de</span>
+          <strong>5,000 <span data-i18n="currency">DH</span></strong>
+          <span data-i18n="cta.priceAll">tout compris</span>
         </div>
         <div class="cta-final__buttons">
-          <a href="https://wa.me/212XXXXXXXXX?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--white btn--lg" target="_blank" rel="noopener">
+          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--white btn--lg" target="_blank" rel="noopener">
             <i data-lucide="message-circle"></i>
-            Discuter sur WhatsApp
+            <span data-i18n="cta.whatsapp">Discuter sur WhatsApp</span>
           </a>
           <a href="mailto:toukrichtemed@gmail.com" class="btn btn--outline-white btn--lg">
             <i data-lucide="mail"></i>
-            Envoyer un email
+            <span data-i18n="cta.email">Envoyer un email</span>
           </a>
         </div>
         <p class="cta-final__reassurance">
           <i data-lucide="clock"></i>
-          Réponse garantie en moins de 5 minutes pendant les heures de travail
+          <span data-i18n="cta.reassurance">Réponse garantie en moins de 5 minutes pendant les heures de travail</span>
         </p>
       </div>
     </div>
@@ -649,34 +671,34 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <div class="footer__logo">
-            <span class="navbar__logo-icon">MT</span>
-            <span>Mohamed Toukrichte</span>
+            <img src="images/logo.png" alt="Mohamed Toukrichte" class="navbar__logo-img" />
+            <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
           </div>
-          <p>Création de sites web professionnels pour entrepreneurs et PME.</p>
+          <p data-i18n="footer.desc">Création de sites web professionnels pour entrepreneurs et PME.</p>
         </div>
         <div class="footer__links">
-          <h4>Navigation</h4>
-          <a href="#offre">L'offre</a>
-          <a href="#inclus">Ce qui est inclus</a>
-          <a href="#processus">Processus</a>
-          <a href="#temoignages">Témoignages</a>
-          <a href="#faq">FAQ</a>
+          <h4 data-i18n="footer.navTitle">Navigation</h4>
+          <a href="#offre" data-i18n="footer.nav1">L'offre</a>
+          <a href="#inclus" data-i18n="footer.nav2">Ce qui est inclus</a>
+          <a href="#processus" data-i18n="footer.nav3">Processus</a>
+          <a href="#temoignages" data-i18n="footer.nav4">Témoignages</a>
+          <a href="#faq" data-i18n="footer.nav5">FAQ</a>
         </div>
         <div class="footer__contact">
-          <h4>Contact</h4>
-          <a href="https://wa.me/212XXXXXXXXX" target="_blank" rel="noopener">
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <a href="https://wa.me/212698921518" target="_blank" rel="noopener">
             <i data-lucide="message-circle"></i> WhatsApp
           </a>
           <a href="mailto:toukrichtemed@gmail.com">
             <i data-lucide="mail"></i> toukrichtemed@gmail.com
           </a>
           <a href="#">
-            <i data-lucide="map-pin"></i> Casablanca, Maroc
+            <i data-lucide="map-pin"></i> <span data-i18n="footer.location">Casablanca, Maroc</span>
           </a>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 Mohamed Toukrichte. Tous droits réservés.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mohamed Toukrichte. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
@@ -684,11 +706,11 @@
   <!-- ═══════════════════════════════════════════ -->
   <!-- WHATSAPP FLOATING BUTTON                    -->
   <!-- ═══════════════════════════════════════════ -->
-  <a href="https://wa.me/212XXXXXXXXX?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+  <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
     <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.14l5.944-1.96A15.906 15.906 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.312 22.618c-.392 1.1-1.932 2.014-3.166 2.282-.846.18-1.952.324-5.674-1.22-4.762-1.974-7.826-6.81-8.066-7.126-.23-.316-1.932-2.574-1.932-4.908 0-2.334 1.222-3.48 1.656-3.956.392-.432 1.042-.632 1.664-.632.2 0 .38.01.542.018.476.02.714.048 1.028.794.392.932 1.348 3.266 1.466 3.504.12.238.238.544.078.86-.15.324-.282.526-.52.81-.238.286-.5.638-.714.856-.238.246-.486.512-.21.988.278.476 1.236 2.038 2.654 3.302 1.822 1.624 3.356 2.126 3.832 2.364.476.238.754.198 1.032-.12.286-.324 1.222-1.42 1.548-1.908.318-.486.644-.406 1.082-.244.442.158 2.774 1.308 3.25 1.546.476.238.794.358.912.554.116.196.116 1.138-.276 2.236z"/>
     </svg>
-    <span class="whatsapp-float__tooltip">Besoin d'aide ?</span>
+    <span class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">Besoin d'aide ?</span>
   </a>
 
   <!-- Scripts -->
