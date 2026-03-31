@@ -246,6 +246,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .navbar__logo {
@@ -258,12 +259,12 @@ section {
 }
 
 .navbar__logo-img {
-  height: 56px; 
+  height: 36px; 
   width: auto;
 }
 
 .navbar__logo-slogan {
-  font-size: var(--font-size-xs);
+  font-size: 0.65rem;
   color: var(--color-text-muted);
   font-weight: 800;
   letter-spacing: 0.03em;
@@ -273,6 +274,8 @@ section {
   display: flex;
   align-items: center;
   gap: var(--space-xl);
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .navbar__link {
@@ -1440,6 +1443,7 @@ section {
     justify-content: center;
     gap: var(--space-2xl);
     z-index: 999;
+    flex: none;
   }
   .navbar__links.active { display: flex; }
   .navbar__link { font-size: var(--font-size-xl); }
@@ -1447,6 +1451,7 @@ section {
   .navbar__toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .navbar__toggle.active span:nth-child(2) { opacity: 0; }
   .navbar__toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .lang-switch { margin-left: var(--space-sm); z-index: 1001; }
 
   .hero { min-height: auto; padding: 120px 0 var(--space-4xl); }
   .hero__cta-group { flex-direction: column; }
