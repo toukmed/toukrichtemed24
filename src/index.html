@@ -28,7 +28,12 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Cache control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="stylesheet" href="css/style.css?v=1.1" />
 </head>
 <body>
   <!-- ═══════════════════════════════════════════ -->
@@ -37,7 +42,7 @@
   <nav class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">
-        <img src="images/logo.png" alt="Mohamed Toukrichte" class="navbar__logo-img" />
+        <img src="images/logo.png?v=1.1" alt="Mohamed Toukrichte" class="navbar__logo-img" />
         <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
       </a>
       <div class="navbar__links" id="navLinks">
@@ -89,7 +94,7 @@
           </a>
         </div>
         <div class="hero__author">
-          <img src="images/mohamed-toukrichte-small.jpg" alt="Mohamed Toukrichte" class="hero__author-photo" />
+          <img src="images/mohamed-toukrichte-small.jpg?v=1.1" alt="Mohamed Toukrichte" class="hero__author-photo" />
           <div class="hero__author-info">
             <strong data-i18n="name">Mohamed Toukrichte</strong>
             <span data-i18n="hero.authorRole">Ingénieur Logiciel — 10+ ans d'expérience</span>
@@ -124,7 +129,7 @@
             <div class="hero__mockup-url" >www.votre-entreprise.ma</div>
           </div>
           <div class="hero__mockup-screen">
-            <img src="images/site-exemple.jpg" alt="Exemple de site web professionnel créé par Mohamed Toukrichte" class="hero__mockup-img" data-i18n-img="mockup" />
+            <img src="images/site-exemple.jpg?v=1.1" alt="Exemple de site web professionnel créé par Mohamed Toukrichte" class="hero__mockup-img" data-i18n-img="mockup" />
           </div>
         </div>
         <div class="hero__float-card hero__float-card--1" data-animate="float">
@@ -392,7 +397,7 @@
     <div class="container">
       <div class="about__inner" data-animate="fade-up">
         <div class="about__photo">
-          <img src="images/mohamed-toukrichte.png" alt="Mohamed Toukrichte" class="about__photo-img" />
+          <img src="images/mohamed-toukrichte.png?v=1.1" alt="Mohamed Toukrichte" class="about__photo-img" />
         </div>
         <div class="about__content">
           <span class="section-tag" data-i18n="about.tag">Qui suis-je</span>
@@ -671,7 +676,7 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <div class="footer__logo">
-            <img src="images/logo.png" alt="Mohamed Toukrichte" class="navbar__logo-img" />
+            <img src="images/logo.png?v=1.1" alt="Mohamed Toukrichte" class="navbar__logo-img" />
             <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
           </div>
           <p data-i18n="footer.desc">Création de sites web professionnels pour entrepreneurs et PME.</p>
@@ -719,6 +724,6 @@
   </button>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=1.1"></script>
 </body>
 </html>
