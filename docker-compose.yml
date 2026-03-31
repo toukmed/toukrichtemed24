@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════
+# ToukrichteMed Landing Page
+# ═══════════════════════════════════════════════════════
+#
+# LOCAL DEV:   docker compose up -d web
+#              → http://localhost:4001
+#
+# PRODUCTION:  docker compose --profile production up -d
+#              → https://toukrichtemed.com (via Traefik)
+#
+# If creatifpro Traefik is already running on ports 80/443,
+# connect this web service to creatifpro's external network
+# instead of starting a second Traefik instance.
+# ═══════════════════════════════════════════════════════
+
+services:
+  # ═══════════════════════════════════════════
+  # TRAEFIK — Reverse Proxy & HTTPS
+  # Only starts with: docker compose --profile production up -d
+  # ═══════════════════════════════════════════
+  traefik:
+    image: traefik:v3
+    container_name: toukrichtemed_traefik
+    restart: unless-stopped
+    profiles: ["production"]
+    command:
+      - "--api.dashboard=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      # HTTP
+      - "--entrypoints.web.address=:80"
+      # HTTPS
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      # Let's Encrypt
+      - "--certificatesresolvers.letsencrypt.acme.email=toukrichtemed@gmail.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+      # Health
+      - "--ping=true"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - letsencrypt:/letsencrypt
+    networks:
+      - toukrichtemed-network
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M
+
+  # ═══════════════════════════════════════════
+  # WEB — Nginx Static Landing Page
+  # ═══════════════════════════════════════════
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: toukrichtemed_web
+    restart: unless-stopped
+    ports:
+      - "4001:80"
+    labels:
+      - "traefik.enable=true"
+      # HTTP → handled by global redirect to HTTPS
+      - "traefik.http.routers.toukrichtemed.rule=Host(`toukrichtemed.com`) || Host(`www.toukrichtemed.com`)"
+      - "traefik.http.routers.toukrichtemed.entrypoints=web"
+      # HTTPS
+      - "traefik.http.routers.toukrichtemed-secure.rule=Host(`toukrichtemed.com`) || Host(`www.toukrichtemed.com`)"
+      - "traefik.http.routers.toukrichtemed-secure.entrypoints=websecure"
+      - "traefik.http.routers.toukrichtemed-secure.tls=true"
+      - "traefik.http.routers.toukrichtemed-secure.tls.certresolver=letsencrypt"
+      - "traefik.http.services.toukrichtemed.loadbalancer.server.port=80"
+      # www → non-www redirect
+      - "traefik.http.middlewares.toukrichtemed-www.redirectregex.regex=^https://www\\.toukrichtemed\\.com/(.*)"
+      - "traefik.http.middlewares.toukrichtemed-www.redirectregex.replacement=https://toukrichtemed.com/$${1}"
+      - "traefik.http.middlewares.toukrichtemed-www.redirectregex.permanent=true"
+      - "traefik.http.routers.toukrichtemed-secure.middlewares=toukrichtemed-www"
+    networks:
+      - toukrichtemed-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 64M
+
+volumes:
+  letsencrypt:
+
+networks:
+  toukrichtemed-network:
+    driver: bridge
