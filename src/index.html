@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr" dir="ltr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,6 +53,10 @@
         <a href="#faq" class="navbar__link" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" class="btn btn--sm btn--primary navbar__cta" data-i18n="nav.cta">Démarrer maintenant</a>
       </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <i data-lucide="moon" class="theme-toggle__icon theme-toggle__icon--dark"></i>
+        <i data-lucide="sun" class="theme-toggle__icon theme-toggle__icon--light"></i>
+      </button>
       <button class="lang-switch" id="langSwitch" aria-label="Changer de langue">
         <span class="lang-switch__label">عربي</span>
       </button>
@@ -703,7 +707,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p data-i18n="footer.copyright">&copy; 2026 Mohamed Toukrichte. Tous droits réservés.</p>
+        <p data-i18n="footer.copyright">&copy; {year} Mohamed Toukrichte. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

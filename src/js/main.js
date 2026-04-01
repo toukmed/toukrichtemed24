@@ -9,8 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initScrollAnimations();
   initSmoothScroll();
+  initThemeToggle();
   initLanguageSwitcher();
   initTestimonialsSlider();
+  // Set copyright year for default language (FR doesn't call setLanguage on load)
+  const copyrightEl = document.querySelector('[data-i18n="footer.copyright"]');
+  if (copyrightEl) {
+    copyrightEl.textContent = copyrightEl.textContent.replace('{year}', new Date().getFullYear());
+  }
 });
 
 /* ── Navbar scroll effect ── */
@@ -285,7 +291,7 @@ const translations = {
     'footer.nav5': 'الأسئلة الشائعة',
     'footer.contactTitle': 'اتصل بنا',
     'footer.location': 'الدار البيضاء، المغرب',
-    'footer.copyright': '© 2026 محمد توقرشت. جميع الحقوق محفوظة.',
+    'footer.copyright': '© {year} محمد توقرشت. جميع الحقوق محفوظة.',
 
     // WhatsApp
     'whatsapp.tooltip': 'تحتاج مساعدة؟'
@@ -452,10 +458,31 @@ const translations = {
     'footer.nav5': 'FAQ',
     'footer.contactTitle': 'Contact',
     'footer.location': 'Casablanca, Maroc',
-    'footer.copyright': '© 2026 Mohamed Toukrichte. Tous droits réservés.',
+    'footer.copyright': '© {year} Mohamed Toukrichte. Tous droits réservés.',
     'whatsapp.tooltip': 'Besoin d\'aide ?'
   }
 };
+
+/* ── Theme Toggle ── */
+function initThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('theme');
+  // Default is light; only switch to dark if explicitly saved
+  if (saved === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+  }
+
+  btn.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
 
 /* ── Language Switcher ── */
 function initLanguageSwitcher() {
@@ -518,6 +545,12 @@ function setLanguage(lang) {
       img.src = lang === 'ar' ? 'images/site-exemple-ar.png' : 'images/site-exemple.jpg';
     }
   });
+
+  // Inject dynamic copyright year
+  const copyrightEl = document.querySelector('[data-i18n="footer.copyright"]');
+  if (copyrightEl) {
+    copyrightEl.textContent = copyrightEl.textContent.replace('{year}', new Date().getFullYear());
+  }
 
   // Toggle body class for CSS
   document.body.classList.toggle('lang-ar', lang === 'ar');
