@@ -122,12 +122,12 @@ const translations = {
 
     // Hero
     'hero.badge': 'متاح — رد في أقل من 5 دقائق',
-    'hero.title': 'احصل على موقع إلكتروني<br /><span class="hero__title-gradient">احترافي في 7 أيام</span><br />— بدون توتر',
+    'hero.title': 'احصل على موقع إلكتروني<br /><span class="hero__title-gradient">احترافي في 24 ساعة</span><br />— بدون توتر',
     'hero.subtitle': 'موقع عصري، متجاوب ومحسّن لمحركات البحث — يُسلَّم جاهزاً بـ <strong>5,000 درهم شاملة</strong>. الاستضافة واسم النطاق للسنة الأولى مشمولان.',
     'hero.whatsapp': 'تواصل عبر واتساب',
     'hero.voirOffre': 'شاهد العرض',
     'hero.authorRole': 'مهندس برمجيات — أكثر من 10 سنوات خبرة',
-    'hero.trust1': 'تسليم في 7 أيام',
+    'hero.trust1': 'تسليم في 24 ساعة',
     'hero.trust2': 'رضا مضمون',
     'hero.trust3': 'أكثر من 10 سنوات خبرة',
     'hero.float1': '100% متجاوب',
@@ -174,7 +174,7 @@ const translations = {
     'offer.f7': 'خرائط جوجل + نموذج اتصال',
     'offer.f8': 'Google Analytics متصل',
     'offer.f9': 'مراجعتان مشمولتان',
-    'offer.f10': 'تسليم في 7 أيام',
+    'offer.f10': 'تسليم في 24 ساعة',
     'offer.cta': 'ابدأ موقعي الآن',
     'offer.note': 'إمكانية الدفع على مرتين: 50% عند البدء، 50% عند التسليم',
 
@@ -201,7 +201,7 @@ const translations = {
 
     // Process
     'process.tag': 'كيف يعمل',
-    'process.title': 'من أول تواصل إلى الإطلاق في 7 أيام',
+    'process.title': 'من أول تواصل إلى الإطلاق في 24 ساعة',
     'process.subtitle': 'مسار واضح وشفاف — تعرف بالضبط أين وصل مشروعك.',
     'process.h1': 'التواصل الأول',
     'process.p1': 'أرسل لي رسالة على واتساب. نتناقش حول مشروعك، احتياجاتك وأهدافك. مجاني وبدون التزام.',
@@ -259,8 +259,8 @@ const translations = {
     'faq.tag': 'الأسئلة الشائعة',
     'faq.title': 'أسئلة متكررة',
     'faq.subtitle': 'كل ما تحتاج معرفته قبل بدء مشروعك.',
-    'faq.q1': 'لماذا 7 أيام فقط؟',
-    'faq.a1': 'بفضل خبرتي ومنهجية عمل محسّنة، أستطيع إنشاء موقعك بسرعة دون التضحية بالجودة. مهلة الـ7 أيام تبدأ فور تلقي كل محتواك (نصوص، صور، شعار). كلما كنت أسرع في الرد، كلما كان موقعك جاهزاً أسرع.',
+    'faq.q1': 'لماذا 24 ساعة فقط؟',
+    'faq.a1': 'بفضل خبرتي ومنهجية عمل محسّنة، أستطيع إنشاء موقعك بسرعة دون التضحية بالجودة. مهلة الـ24 ساعة تبدأ فور تلقي كل محتواك (نصوص، صور، شعار). كلما كنت أسرع في الرد، كلما كان موقعك جاهزاً أسرع.',
     'faq.q2': 'هل يجب أن أقدم المحتوى؟',
     'faq.a2': 'مثالياً نعم — أنت تعرف شركتك أفضل من أي شخص. لكن لا تقلق: أرسل لك استبياناً بسيطاً لإرشادك. إذا لم تكن لديك صور احترافية، يمكنني استخدام صور عالية الجودة تناسب مجالك.',
     'faq.q3': 'هل يمكنني تعديل الموقع بعد التسليم؟',
@@ -274,7 +274,7 @@ const translations = {
 
     // CTA Final
     'cta.title': 'مستعد لإطلاق موقعك الإلكتروني؟',
-    'cta.text': 'انضم إلى رواد الأعمال الذين اختاروا الظهور على الإنترنت. موقعك الاحترافي على بعد 7 أيام من أن يصبح حقيقة.',
+    'cta.text': 'انضم إلى رواد الأعمال الذين اختاروا الظهور على الإنترنت. موقعك الاحترافي على بعد 24 ساعة من أن يصبح حقيقة.',
     'cta.priceFrom': 'ابتداءً من',
     'cta.priceAll': 'شامل كل شيء',
     'cta.whatsapp': 'تواصل عبر واتساب',
@@ -308,12 +308,12 @@ const translations = {
     'nav.faq': 'FAQ',
     'nav.cta': 'Démarrer maintenant',
     'hero.badge': 'Disponible — Réponse en moins de 5 min',
-    'hero.title': 'Obtenez un site web<br /><span class="hero__title-gradient">professionnel en 7 jours</span><br />— sans stress',
+    'hero.title': 'Obtenez un site web<br /><span class="hero__title-gradient">professionnel en 24 heures</span><br />— sans stress',
     'hero.subtitle': 'Un site moderne, responsive et optimisé pour Google — livré clé en main pour <strong>5,000 DH tout compris</strong>. Hébergement et domaine de la première année inclus.',
     'hero.whatsapp': 'Discuter sur WhatsApp',
     'hero.voirOffre': 'Voir l\'offre',
     'hero.authorRole': 'Ingénieur Logiciel — 10+ ans d\'expérience',
-    'hero.trust1': 'Livraison 7 jours',
+    'hero.trust1': 'Livraison 24 heures',
     'hero.trust2': 'Satisfaction garantie',
     'hero.trust3': '10+ ans d\'expérience',
     'hero.mockupUrl': 'www.votre-entreprise.ma',
@@ -357,7 +357,7 @@ const translations = {
     'offer.f7': 'Google Maps + formulaire de contact',
     'offer.f8': 'Google Analytics connecté',
     'offer.f9': '2 révisions incluses',
-    'offer.f10': 'Livraison en 7 jours',
+    'offer.f10': 'Livraison en 24 heures',
     'offer.cta': 'Démarrer mon site maintenant',
     'offer.note': 'Paiement en 2 fois possible : 50% au démarrage, 50% à la livraison',
     'features.tag': 'Détails',
@@ -380,7 +380,7 @@ const translations = {
     'features.h8': '2 révisions',
     'features.p8': 'Pas satisfait du premier rendu ? Deux cycles de révision sont inclus pour un résultat parfait.',
     'process.tag': 'Comment ça marche',
-    'process.title': 'De la prise de contact à la mise en ligne en 7 jours',
+    'process.title': 'De la prise de contact à la mise en ligne en 24 heures',
     'process.subtitle': 'Un processus clair et transparent — vous savez exactement où en est votre projet.',
     'process.h1': 'Prise de contact',
     'process.p1': 'Envoyez-moi un message sur WhatsApp. On discute de votre projet, vos besoins, vos objectifs. C\'est gratuit et sans engagement.',
@@ -430,8 +430,8 @@ const translations = {
     'faq.tag': 'FAQ',
     'faq.title': 'Questions fréquentes',
     'faq.subtitle': 'Tout ce que vous devez savoir avant de démarrer votre projet.',
-    'faq.q1': 'Pourquoi seulement 7 jours ?',
-    'faq.a1': 'Grâce à mon expérience et à un processus de travail optimisé, je peux créer votre site rapidement sans sacrifier la qualité. Le délai de 7 jours commence dès que je reçois tout votre contenu (textes, photos, logo). Plus vous êtes réactif, plus vite votre site sera en ligne.',
+    'faq.q1': 'Pourquoi seulement 24 heures ?',
+    'faq.a1': 'Grâce à mon expérience et à un processus de travail optimisé, je peux créer votre site rapidement sans sacrifier la qualité. Le délai de 24 heures commence dès que je reçois tout votre contenu (textes, photos, logo). Plus vous êtes réactif, plus vite votre site sera en ligne.',
     'faq.q2': 'Est-ce que je dois fournir le contenu ?',
     'faq.a2': 'Idéalement oui — vous connaissez mieux votre entreprise que quiconque. Mais ne vous inquiétez pas : je vous envoie un questionnaire simple pour vous guider. Si vous n\'avez pas de photos professionnelles, je peux utiliser des images de qualité adaptées à votre secteur.',
     'faq.q3': 'Est-ce que je peux modifier le site après la livraison ?',
@@ -443,7 +443,7 @@ const translations = {
     'faq.q6': 'Mon site sera-t-il visible sur Google ?',
     'faq.a6': 'Oui ! Le SEO de base est inclus : meta tags, titres optimisés, descriptions, et soumission à Google. Votre site sera indexé et commencera à apparaître dans les résultats de recherche. Pour un référencement avancé, des options supplémentaires sont disponibles.',
     'cta.title': 'Prêt à lancer votre site web ?',
-    'cta.text': 'Rejoignez les entrepreneurs qui ont fait le choix de la visibilité en ligne. Votre site professionnel est à 7 jours de devenir réalité.',
+    'cta.text': 'Rejoignez les entrepreneurs qui ont fait le choix de la visibilité en ligne. Votre site professionnel est à 24 heures de devenir réalité.',
     'cta.priceFrom': 'À partir de',
     'cta.priceAll': 'tout compris',
     'cta.whatsapp': 'Discuter sur WhatsApp',
@@ -536,7 +536,7 @@ function setLanguage(lang) {
   // Update page title
   document.title = lang === 'ar'
     ? 'محمد توقرشت — إنشاء مواقع إلكترونية احترافية | 7 أيام، 5000 درهم'
-    : 'Mohamed Toukrichte — Création de Sites Web Professionnels | 7 Jours, 5000 DH';
+    : 'Mohamed Toukrichte — Création de Sites Web Professionnels | 24 Heures, 5000 DH';
 
   // Swap images with lang variants
   document.querySelectorAll('[data-i18n-img]').forEach(img => {
