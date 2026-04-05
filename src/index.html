@@ -1,733 +1,721 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" data-theme="light">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Toukrichte — Création de Sites Web Professionnels | 24 Heures, 5000 DH</title>
-  <meta name="description" content="Obtenez un site web professionnel en 24 heures pour 5,000 DH tout compris — design moderne, responsive, SEO de base, hébergement 1ère année inclus." />
-  <meta name="keywords" content="création site web, site web professionnel, web design Maroc, site web Casablanca, développeur web Maroc" />
-  <meta name="author" content="Mohamed Toukrichte" />
-
+  <title>toukrichtemed — Site Web Professionnel en 24H au Maroc</title>
+  <meta name="description" content="Obtenez votre site web professionnel en 24h au Maroc pour 5000 DH. IA, design moderne, 5-7 pages, SEO, hébergement inclus. Contactez-nous maintenant !" />
+  <meta name="keywords" content="création site web Maroc, site web 24h, site web pas cher Maroc, agence web Maroc, site web PME Maroc" />
+  <link rel="canonical" href="https://toukrichtemed.com/" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Mohamed Toukrichte — Site Web Professionnel en 24 Heures" />
-  <meta property="og:description" content="Obtenez un site web professionnel en 24 heures pour 5,000 DH tout compris." />
+  <meta property="og:title" content="toukrichtemed — Site Web Professionnel en 24H au Maroc" />
+  <meta property="og:description" content="Site web pro en 24h pour 5000 DH. IA, SEO, hébergement inclus." />
+  <meta property="og:url" content="https://toukrichtemed.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://toukrichtemed.com" />
-  <meta property="og:image" content="https://toukrichtemed.com/images/og-image.jpg" />
-  <meta property="og:locale" content="fr_MA" />
-
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
-
-  <!-- Fonts -->
+  <meta property="og:image" content="https://toukrichtemed.com/images/logo.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Lucide Icons (lightweight) -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-
-  <!-- Styles -->
-  <!-- Cache control -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-
-  <link rel="stylesheet" href="css/style.css?v=1.1" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#1E40AF', light: '#3B82F6', dark: '#1E3A8A' },
+            accent:  { DEFAULT: '#F97316', light: '#FB923C', dark: '#EA580C' },
+            whatsapp: '#25D366',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Cairo', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Analytics (uncomment and replace G-XXXXXXXXXX with your ID) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </head>
-<body>
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- NAVBAR                                      -->
-  <!-- ═══════════════════════════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#" class="navbar__logo">
-        <img src="images/logo.png?v=1.1" alt="Mohamed Toukrichte" class="navbar__logo-img" />
-        <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
-      </a>
-      <div class="navbar__links" id="navLinks">
-        <a href="#offre" class="navbar__link" data-i18n="nav.offre">Offre</a>
-        <a href="#inclus" class="navbar__link" data-i18n="nav.inclus">Ce qui est inclus</a>
-        <a href="#processus" class="navbar__link" data-i18n="nav.processus">Processus</a>
-        <a href="#temoignages" class="navbar__link" data-i18n="nav.temoignages">Témoignages</a>
-        <a href="#faq" class="navbar__link" data-i18n="nav.faq">FAQ</a>
-        <a href="#contact" class="btn btn--sm btn--primary navbar__cta" data-i18n="nav.cta">Démarrer maintenant</a>
-      </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
-        <i data-lucide="moon" class="theme-toggle__icon theme-toggle__icon--dark"></i>
-        <i data-lucide="sun" class="theme-toggle__icon theme-toggle__icon--light"></i>
-      </button>
-      <button class="lang-switch" id="langSwitch" aria-label="Changer de langue">
-        <span class="lang-switch__label">عربي</span>
-      </button>
-      <button class="navbar__toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<body class="bg-white text-gray-800">
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- HERO SECTION                                -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero__bg-effects">
-      <div class="hero__gradient-orb hero__gradient-orb--1"></div>
-      <div class="hero__gradient-orb hero__gradient-orb--2"></div>
-      <div class="hero__grid-pattern"></div>
-    </div>
-    <div class="container hero__inner">
-      <div class="hero__content" data-animate="fade-up">
-        
-        <h1 class="hero__title" data-i18n-html="hero.title">
-          Obtenez un site web<br />
-          <span class="hero__title-gradient">professionnel en 24 heures</span><br />
-          — sans stress
-        </h1>
-        <p class="hero__subtitle" data-i18n-html="hero.subtitle">
-          Un site moderne, responsive et optimisé pour Google — livré clé en main
-          pour <strong>5,000 DH tout compris</strong>. Hébergement et domaine de la première année inclus.
-        </p>
-        <div class="hero__cta-group">
-          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
-            <i data-lucide="message-circle"></i>
-            <span data-i18n="hero.whatsapp">Discuter sur WhatsApp</span>
+  <!-- ======== NAVBAR ======== -->
+  <header class="navbar fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3" aria-label="toukrichtemed — Accueil">
+          <img src="images/logo.png" alt="toukrichtemed logo" class="h-9 w-auto" loading="eager" />
+          <span class="font-bold text-lg text-gray-900 hidden sm:block">toukrichtemed</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6" aria-label="Navigation principale">
+          <a href="index.html" class="nav-link" aria-current="page">
+            <span data-lang="fr">Accueil</span>
+            <span data-lang="ar">الرئيسية</span>
           </a>
-          <a href="#offre" class="btn btn--outline btn--lg">
-            <span data-i18n="hero.voirOffre">Voir l'offre</span>
-            <i data-lucide="arrow-down"></i>
+          <a href="services.html" class="nav-link">
+            <span data-lang="fr">Services</span>
+            <span data-lang="ar">خدماتنا</span>
           </a>
-        </div>
-        <div class="hero__author">
-          <img src="images/mohamed-toukrichte-small.jpg?v=1.1" alt="Mohamed Toukrichte" class="hero__author-photo" />
-          <div class="hero__author-info">
-            <strong data-i18n="name">Mohamed Toukrichte</strong>
-            <span data-i18n="hero.authorRole">Ingénieur Logiciel — 10+ ans d'expérience</span>
-          </div>
-        </div>
-        <div class="hero__trust">
-          <div class="hero__trust-item">
-            <i data-lucide="zap"></i>
-            <span data-i18n="hero.trust1">Livraison 24 heures</span>
-          </div>
-          <div class="hero__trust-item">
-            <i data-lucide="shield-check"></i>
-            <span data-i18n="hero.trust2">Satisfaction garantie</span>
-          </div>
-          <div class="hero__trust-item">
-            <i data-lucide="star"></i>
-            <span data-i18n="hero.trust3">10+ ans d'expérience</span>
-          </div>
+          <a href="portfolio.html" class="nav-link">
+            <span data-lang="fr">Réalisations</span>
+            <span data-lang="ar">أعمالنا</span>
+          </a>
+          <a href="about.html" class="nav-link">
+            <span data-lang="fr">À Propos</span>
+            <span data-lang="ar">من نحن</span>
+          </a>
+          <a href="blog.html" class="nav-link">
+            <span data-lang="fr">Blog</span>
+            <span data-lang="ar">المدونة</span>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <span data-lang="fr">Contact</span>
+            <span data-lang="ar">تواصل</span>
+          </a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Language Switcher -->
+          <button class="lang-btn" aria-label="Changer la langue" title="Switch language">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="lang-btn-label">عربية</span>
+          </button>
+          <!-- CTA -->
+          <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20un%20site%20web%20en%2024h%20!" class="btn-primary text-sm hidden sm:inline-flex" target="_blank" rel="noopener noreferrer">
+            <span data-lang="fr">Démarrer maintenant</span>
+            <span data-lang="ar">ابدأ الآن</span>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menu" aria-expanded="false">
+            <svg class="icon-menu w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg class="icon-close w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
       </div>
-    
-      <div class="hero__visual" data-animate="fade-up" data-delay="200">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          <span data-i18n="hero.badge">Disponible — Réponse en moins de 5 min</span>
-        </div>
-        <div class="hero__mockup">
-          <div class="hero__mockup-browser">
-            <div class="hero__mockup-dots">
-              <span></span><span></span><span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden border-t border-gray-100 bg-white" aria-label="Navigation mobile">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="index.html" class="nav-link block py-2"><span data-lang="fr">Accueil</span><span data-lang="ar">الرئيسية</span></a>
+        <a href="services.html" class="nav-link block py-2"><span data-lang="fr">Services</span><span data-lang="ar">خدماتنا</span></a>
+        <a href="portfolio.html" class="nav-link block py-2"><span data-lang="fr">Réalisations</span><span data-lang="ar">أعمالنا</span></a>
+        <a href="about.html" class="nav-link block py-2"><span data-lang="fr">À Propos</span><span data-lang="ar">من نحن</span></a>
+        <a href="blog.html" class="nav-link block py-2"><span data-lang="fr">Blog</span><span data-lang="ar">المدونة</span></a>
+        <a href="contact.html" class="nav-link block py-2"><span data-lang="fr">Contact</span><span data-lang="ar">تواصل</span></a>
+        <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20un%20site%20web%20en%2024h%20!" class="btn-whatsapp mt-3 text-sm justify-center" target="_blank" rel="noopener noreferrer">
+          <span data-lang="fr">Démarrer maintenant</span>
+          <span data-lang="ar">ابدأ الآن</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======== HERO ======== -->
+    <section class="hero-gradient hero-pattern min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden" aria-label="Section principale">
+      <!-- Decorative circles -->
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-primary-light/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Left: Text -->
+          <div class="text-gray-900">
+            <div class="fade-up">
+              <span class="badge badge-accent mb-6">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span data-lang="fr">Propulsé par l'IA</span>
+                <span data-lang="ar">مدعوم بالذكاء الاصطناعي</span>
+              </span>
             </div>
-            <div class="hero__mockup-url" >www.votre-entreprise.ma</div>
+
+            <h1 class="fade-up delay-100 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6">
+              <span data-lang="fr">
+                Site Web Pro<br/>
+                <span class="gradient-text">en 24H</span> au Maroc
+              </span>
+              <span data-lang="ar">
+                موقع ويب احترافي<br/>
+                <span class="gradient-text">في 24 ساعة</span> بالمغرب
+              </span>
+            </h1>
+
+            <p class="fade-up delay-200 text-lg sm:text-xl text-gray-700 mb-8 max-w-xl leading-relaxed">
+              <span data-lang="fr">L'IA au service de votre business : un site web complet, modern et optimisé SEO livré en moins d'une journée pour <strong class="text-gray-900">5 000 DH</strong>. Hébergement + domaine inclus.</span>
+              <span data-lang="ar">الذكاء الاصطناعي في خدمة عملك: موقع ويب متكامل، عصري ومُحسَّن لمحركات البحث يُسلَّم في أقل من يوم بـ <strong class="text-gray-900" dir="ltr">5 000 درهم</strong>. مع الاستضافة والدومين.</span>
+            </p>
+
+            <div class="fade-up delay-300 flex flex-wrap gap-4">
+              <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20commander%20mon%20site%20web%20en%2024h%20!"
+                 class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span data-lang="fr">Obtenez votre site en 24H</span>
+                <span data-lang="ar">احصل على موقعك في 24 ساعة</span>
+              </a>
+              <a href="services.html" class="btn-secondary">
+                <span data-lang="fr">Découvrir l'offre</span>
+                <span data-lang="ar">اكتشف العرض</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="fade-up delay-400 flex flex-wrap items-center gap-6 mt-10">
+              <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-lang="fr">Livraison en 24H garantie</span>
+                <span data-lang="ar">تسليم في 24 ساعة مضمون</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-lang="fr">Prix fixe : 5 000 DH</span>
+                <span data-lang="ar">سعر ثابت: 5,000 درهم</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+                <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span data-lang="fr">SSL + Hébergement inclus</span>
+                <span data-lang="ar">SSL + استضافة مشمولة</span>
+              </div>
+            </div>
           </div>
-          <div class="hero__mockup-screen">
-            <img src="images/site-exemple.jpg?v=1.1" alt="Exemple de site web professionnel créé par Mohamed Toukrichte" class="hero__mockup-img" data-i18n-img="mockup" />
+
+          <!-- Right: Visual card -->
+          <div class="fade-up delay-200 lg:block">
+            <div class="relative">
+              <!-- Main card -->
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl">
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                  </div>
+                  <span class="text-xs text-blue-200 font-mono">toukrichtemed.com</span>
+                </div>
+                <!-- Mockup content -->
+                <div class="space-y-3">
+                  <div class="h-6 bg-white/20 rounded-lg w-3/4"></div>
+                  <div class="h-4 bg-white/15 rounded w-full"></div>
+                  <div class="h-4 bg-white/15 rounded w-5/6"></div>
+                  <div class="grid grid-cols-3 gap-2 mt-4">
+                    <div class="h-20 bg-accent/30 rounded-lg"></div>
+                    <div class="h-20 bg-primary-light/30 rounded-lg"></div>
+                    <div class="h-20 bg-white/20 rounded-lg"></div>
+                  </div>
+                  <div class="h-10 bg-accent/40 rounded-full w-40 mt-2"></div>
+                </div>
+              </div>
+
+              <!-- Floating badge: 24H -->
+              <div class="absolute -top-4 -right-4 bg-accent text-white rounded-2xl px-4 py-3 shadow-xl text-center">
+                <div class="text-2xl font-black leading-none">24H</div>
+                <div class="text-xs font-semibold mt-0.5" data-lang="fr">Livraison</div>
+                <div class="text-xs font-semibold mt-0.5" data-lang="ar">تسليم</div>
+              </div>
+
+              <!-- Speed indicator -->
+              <div class="absolute -bottom-4 -left-4 bg-white text-gray-800 rounded-xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+                <span class="text-2xl" aria-hidden="true">⚡</span>
+                <div>
+                  <div class="font-bold text-sm leading-none text-primary" dir="ltr">5 000 <span data-lang="fr">DH</span><span data-lang="ar">درهم</span></div>
+                  <div class="text-xs text-gray-500 mt-0.5" data-lang="fr">Prix fixe</div>
+                  <div class="text-xs text-gray-500 mt-0.5" data-lang="ar">سعر ثابت</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hero__float-card hero__float-card--1" data-animate="float">
-          <i data-lucide="smartphone"></i>
-          <span data-i18n="hero.float1">100% Responsive</span>
-        </div>
-        <div class="hero__float-card hero__float-card--2" data-animate="float">
-          <i data-lucide="trending-up"></i>
-          <span data-i18n="hero.float2">SEO Optimisé</span>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PROBLÈME → SOLUTION                         -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="problem" id="probleme">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="problem.tag">Le constat</span>
-        <h2 class="section-title" data-i18n="problem.title">Votre entreprise mérite d'être visible en ligne</h2>
-        <p class="section-subtitle" data-i18n="problem.subtitle">En 2026, un client sur deux vous cherche sur Google avant de vous contacter. Sans site web, vous êtes invisible.</p>
+    <!-- ======== BÉNÉFICES CLÉS ======== -->
+    <section class="py-20 bg-white" aria-labelledby="benefits-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="badge badge-primary mb-4">
+            <span data-lang="fr">Pourquoi nous choisir</span>
+            <span data-lang="ar">لماذا تختارنا</span>
+          </span>
+          <h2 id="benefits-title" class="section-title fade-up">
+            <span data-lang="fr">Tout ce dont vous avez besoin,<br/>livré en <span class="gradient-text">24 heures</span></span>
+            <span data-lang="ar">كل ما تحتاجه،<br/>يُسلَّم في <span class="gradient-text">24 ساعة</span></span>
+          </h2>
+          <div class="section-divider mt-4"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="card card-bordered text-center fade-up">
+            <div class="icon-box icon-box-lg bg-orange-50 mx-auto mb-5">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">
+              <span data-lang="fr">Rapidité 24H</span>
+              <span data-lang="ar">سرعة 24 ساعة</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">Votre site est livré opérationnel en moins d'une journée. Zéro attente, engagement tenu.</span>
+              <span data-lang="ar">يُسلَّم موقعك جاهزاً للعمل في أقل من يوم. لا انتظار، التزام تام.</span>
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card card-bordered text-center fade-up delay-100">
+            <div class="icon-box icon-box-lg bg-blue-50 mx-auto mb-5">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h1.5a1.5 1.5 0 010 3H9m0-3v6m6-6v2m0 2v2"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">
+              <span data-lang="fr">IA Avancée</span>
+              <span data-lang="ar">ذكاء اصطناعي متقدم</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">L'intelligence artificielle optimise chaque détail : design, textes, SEO et performances dès le début.</span>
+              <span data-lang="ar">يُحسِّن الذكاء الاصطناعي كل تفصيل: تصميم، محتوى، SEO وأداء من البداية.</span>
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card card-bordered text-center fade-up delay-200">
+            <div class="icon-box icon-box-lg bg-green-50 mx-auto mb-5">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">
+              <span data-lang="fr">Prix Transparent</span>
+              <span data-lang="ar">سعر شفاف</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">5 000 DH fixe, tout compris. Pas de surprises, pas de frais cachés. Hébergement et domaine inclus 1 an.</span>
+              <span data-lang="ar">5,000 درهم ثابت، شامل كل شيء. لا مفاجآت. استضافة ودومين لسنة كاملة.</span>
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card card-bordered text-center fade-up delay-300">
+            <div class="icon-box icon-box-lg bg-purple-50 mx-auto mb-5">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/></svg>
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">
+              <span data-lang="fr">Tout Inclus</span>
+              <span data-lang="ar">كل شيء مشمول</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">5 à 7 pages, design responsive, SEO, WhatsApp, Google Maps, SSL, hébergement et nom de domaine.</span>
+              <span data-lang="ar">5-7 صفحات، تصميم متجاوب، SEO، واتساب، خرائط، SSL، استضافة ودومين.</span>
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="problem__grid">
-        <div class="problem__col problem__col--pain" data-animate="fade-up">
-          <h3 class="problem__col-title problem__col-title--pain">
-            <i data-lucide="x-circle"></i>
-            <span data-i18n="problem.painTitle">Sans site web…</span>
+    <!-- ======== COMMENT ÇA MARCHE ======== -->
+    <section class="py-20 bg-gray-50" aria-labelledby="process-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="badge badge-accent mb-4">
+            <span data-lang="fr">Processus simplifié</span>
+            <span data-lang="ar">عملية مبسطة</span>
+          </span>
+          <h2 id="process-title" class="section-title fade-up">
+            <span data-lang="fr">Comment ça marche ?<br/>Le processus <span class="gradient-text">24H</span></span>
+            <span data-lang="ar">كيف يعمل؟<br/>عملية <span class="gradient-text">24 ساعة</span></span>
+          </h2>
+          <div class="section-divider mt-4"></div>
+          <p class="section-subtitle mx-auto mt-6 fade-up delay-100">
+            <span data-lang="fr">Un processus éprouvé en 4 étapes pour livrer votre site web professionnel en moins d'une journée.</span>
+            <span data-lang="ar">عملية مُجرَّبة في 4 خطوات لتسليم موقعك الاحترافي في أقل من يوم.</span>
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="timeline-horizontal relative text-center fade-up">
+            <div class="w-16 h-16 rounded-2xl bg-primary text-white text-2xl font-black flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary/30">1</div>
+            <h3 class="font-bold text-lg mb-2">
+              <span data-lang="fr">Briefing Client</span>
+              <span data-lang="ar">إحاطة مع العميل</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">Vous partagez votre contenu (textes, logo, images). Un questionnaire simple guidé vous est fourni.</span>
+              <span data-lang="ar">تشاركنا محتواك (نصوص، شعار، صور). نوفر لك استبياناً بسيطاً ومُوجَّهاً.</span>
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-horizontal relative text-center fade-up delay-100">
+            <div class="w-16 h-16 rounded-2xl bg-accent text-white text-2xl font-black flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent/30">2</div>
+            <h3 class="font-bold text-lg mb-2">
+              <span data-lang="fr">Conception IA</span>
+              <span data-lang="ar">تصميم بالذكاء الاصطناعي</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">L'IA génère la structure, les textes et le design. Notre équipe affine chaque détail pour votre secteur.</span>
+              <span data-lang="ar">يولِّد الذكاء الاصطناعي الهيكل والنصوص والتصميم. فريقنا يُصقل كل تفصيل.</span>
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-horizontal relative text-center fade-up delay-200">
+            <div class="w-16 h-16 rounded-2xl bg-purple-600 text-white text-2xl font-black flex items-center justify-center mx-auto mb-5 shadow-lg shadow-purple-600/30">3</div>
+            <h3 class="font-bold text-lg mb-2">
+              <span data-lang="fr">Optimisation</span>
+              <span data-lang="ar">تحسين وضبط</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">SEO, performances, mobile-first, intégrations WhatsApp et Google Maps. Tout est testé et optimisé.</span>
+              <span data-lang="ar">SEO، أداء، mobile-first، تكامل واتساب. كل شيء يُختبر ويُحسَّن بدقة.</span>
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-horizontal relative text-center fade-up delay-300">
+            <div class="w-16 h-16 rounded-2xl bg-green-600 text-white text-2xl font-black flex items-center justify-center mx-auto mb-5 shadow-lg shadow-green-600/30">4</div>
+            <h3 class="font-bold text-lg mb-2">
+              <span data-lang="fr">Livraison</span>
+              <span data-lang="ar">التسليم</span>
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              <span data-lang="fr">Votre site est mis en ligne sur votre domaine avec SSL. Vous recevez un accès complet et une formation rapide.</span>
+              <span data-lang="ar">يُنشر موقعك مع SSL ودومينك الخاص. تحصل على وصول كامل وتدريب سريع.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CHIFFRES CLÉS ======== -->
+    <section class="py-20 bg-primary" aria-labelledby="stats-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="stats-title" class="text-3xl font-bold text-white fade-up">
+            <span data-lang="fr">Des chiffres qui parlent d'eux-mêmes</span>
+            <span data-lang="ar">أرقام تتحدث عن نفسها</span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="fade-up">
+            <div class="counter-value text-white" data-counter data-target="24" data-suffix="H">24H</div>
+            <p class="text-blue-200 mt-2 font-medium">
+              <span data-lang="fr">Délai de livraison</span>
+              <span data-lang="ar">وقت التسليم</span>
+            </p>
+          </div>
+          <div class="fade-up delay-100">
+            <div class="counter-value text-white" data-counter data-target="5000" data-suffix=" DH" dir="ltr">5 000 <span data-lang="fr">DH</span><span data-lang="ar">درهم</span></div>
+            <p class="text-blue-200 mt-2 font-medium">
+              <span data-lang="fr">Prix tout compris</span>
+              <span data-lang="ar">السعر الشامل</span>
+            </p>
+          </div>
+          <div class="fade-up delay-200">
+            <div class="counter-value text-white" data-counter data-target="7" data-prefix="">7</div>
+            <p class="text-blue-200 mt-2 font-medium">
+              <span data-lang="fr">Pages incluses (max)</span>
+              <span data-lang="ar">صفحات مشمولة</span>
+            </p>
+          </div>
+          <div class="fade-up delay-300">
+            <div class="counter-value text-white" data-counter data-target="10" data-suffix="+">10+</div>
+            <p class="text-blue-200 mt-2 font-medium">
+              <span data-lang="fr">Années d'expérience</span>
+              <span data-lang="ar">سنوات خبرة</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== TÉMOIGNAGES ======== -->
+    <section class="py-20 bg-white" aria-labelledby="testimonials-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="badge badge-primary mb-4">
+            <span data-lang="fr">Ils nous font confiance</span>
+            <span data-lang="ar">يثقون بنا</span>
+          </span>
+          <h2 id="testimonials-title" class="section-title fade-up">
+            <span data-lang="fr">Ce que disent<br/>nos <span class="gradient-text">clients</span></span>
+            <span data-lang="ar">ماذا يقول<br/><span class="gradient-text">عملاؤنا</span></span>
+          </h2>
+          <div class="section-divider mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card fade-up">
+            <div class="stars mb-3" aria-label="5 étoiles sur 5">★★★★★</div>
+            <p class="text-gray-700 leading-relaxed mb-5">
+              <span data-lang="fr">"Incroyable ! Mon site de restauration était en ligne en moins de 20 heures. Design moderne, tout parfaitement intégré. Je recommande vivement !"</span>
+              <span data-lang="ar">"لا يُصدَّق! كان موقع مطعمي على الإنترنت في أقل من 20 ساعة. تصميم عصري، كل شيء متكامل بشكل مثالي. أنصح به بشدة!"</span>
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0" aria-hidden="true">YB</div>
+              <div>
+                <div class="font-semibold text-gray-900" data-lang="fr">Youssef Ben Ali</div>
+                <div class="font-semibold text-gray-900 hidden" data-lang="ar">يوسف بن علي</div>
+                <div class="text-xs text-gray-500" data-lang="fr">Restaurant, Casablanca</div>
+                <div class="text-xs text-gray-500 hidden" data-lang="ar">مطعم، الدار البيضاء</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card fade-up delay-100">
+            <div class="stars mb-3" aria-label="5 étoiles sur 5">★★★★★</div>
+            <p class="text-gray-700 leading-relaxed mb-5">
+              <span data-lang="fr">"J'attendais des semaines pour un site. Avec toukrichtemed, en 24h j'avais un site professionnel, optimisé et prêt à recevoir des clients. Merci !"</span>
+              <span data-lang="ar">"كنت أنتظر أسابيع للحصول على موقع. مع toukrichtemed، في 24 ساعة حصلت على موقع احترافي ومُحسَّن. شكراً!"</span>
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm flex-shrink-0" aria-hidden="true">SL</div>
+              <div>
+                <div class="font-semibold text-gray-900" data-lang="fr">Sara Lamrani</div>
+                <div class="font-semibold text-gray-900 hidden" data-lang="ar">سارة لمراني</div>
+                <div class="text-xs text-gray-500" data-lang="fr">Boutique en ligne, Rabat</div>
+                <div class="text-xs text-gray-500 hidden" data-lang="ar">متجر إلكتروني، الرباط</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card fade-up delay-200">
+            <div class="stars mb-3" aria-label="5 étoiles sur 5">★★★★★</div>
+            <p class="text-gray-700 leading-relaxed mb-5">
+              <span data-lang="fr">"La rapidité et la qualité m'ont bluffé. L'intégration WhatsApp a boosté mes demandes de renseignements. Un investissement qui rentabilise rapidement."</span>
+              <span data-lang="ar">"السرعة والجودة دهشتاني. أدى تكامل واتساب إلى تعزيز استفساراتي. استثمار يُدرّ أرباحاً بسرعة."</span>
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-sm flex-shrink-0" aria-hidden="true">KO</div>
+              <div>
+                <div class="font-semibold text-gray-900" data-lang="fr">Karim Ouhssine</div>
+                <div class="font-semibold text-gray-900 hidden" data-lang="ar">كريم أوحسين</div>
+                <div class="text-xs text-gray-500" data-lang="fr">Cabinet comptable, Marrakech</div>
+                <div class="text-xs text-gray-500 hidden" data-lang="ar">مكتب محاسبة، مراكش</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== INCLUSIONS RAPIDE ======== -->
+    <section class="py-20 bg-gray-50" aria-labelledby="includes-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+          <!-- Left -->
+          <div>
+            <span class="badge badge-accent mb-4">
+              <span data-lang="fr">Ce qui est inclus</span>
+              <span data-lang="ar">ما هو مشمول</span>
+            </span>
+            <h2 id="includes-title" class="section-title mb-6 fade-up">
+              <span data-lang="fr">5 000 DH,<br/><span class="gradient-text">tout est inclus</span></span>
+              <span data-lang="ar">5,000 درهم،<br/><span class="gradient-text">كل شيء مشمول</span></span>
+            </h2>
+            <p class="text-gray-600 mb-8 leading-relaxed fade-up delay-100">
+              <span data-lang="fr">Une offre transparente, sans frais cachés. Tout ce qu'il faut pour une présence en ligne professionnelle et efficace dès le premier jour.</span>
+              <span data-lang="ar">عرض شفاف بلا رسوم مخفية. كل ما تحتاجه لحضور إلكتروني احترافي وفعّال من اليوم الأول.</span>
+            </p>
+            <ul class="space-y-3 mb-8 fade-up delay-200">
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">5 à 7 pages professionnelles (Accueil, Services, À Propos, Contact…)</span><span class="text-gray-700" data-lang="ar">5 إلى 7 صفحات احترافية (رئيسية، خدمات، من نحن، تواصل…)</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">Design responsive (mobile, tablette, desktop)</span><span class="text-gray-700" data-lang="ar">تصميم متجاوب (هاتف، جهاز لوحي، حاسوب)</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">SEO de base (balises, méta, attributs alt, structure)</span><span class="text-gray-700" data-lang="ar">SEO أساسي (علامات، ميتا، بنية)</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">Bouton WhatsApp intégré pour contact direct</span><span class="text-gray-700" data-lang="ar">زر واتساب مدمج للتواصل المباشر</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">Certificat SSL (HTTPS) — sécurité totale</span><span class="text-gray-700" data-lang="ar">شهادة SSL (HTTPS) — أمان كامل</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">Hébergement + nom de domaine pour 1 an</span><span class="text-gray-700" data-lang="ar">استضافة + دومين لمدة سنة</span></li>
+              <li class="check-item"><div class="check-icon" aria-hidden="true"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700" data-lang="fr">Formation à la mise à jour de base de votre site</span><span class="text-gray-700" data-lang="ar">تدريب على تحديث موقعك بشكل أساسي</span></li>
+            </ul>
+            <a href="services.html" class="btn-primary inline-flex fade-up delay-300">
+              <span data-lang="fr">Voir le détail complet de l'offre</span>
+              <span data-lang="ar">عرض تفاصيل الحزمة الكاملة</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Right: Price card -->
+          <div class="fade-up delay-100">
+            <div class="pricing-card relative z-10">
+              <div class="relative z-10">
+                <div class="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-2" data-lang="fr">Offre complète</div>
+                <div class="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-2 hidden" data-lang="ar">العرض الشامل</div>
+                <div class="text-5xl font-black text-white mb-1" dir="ltr">5 000 <span class="text-2xl"><span data-lang="fr">DH</span><span data-lang="ar">درهم</span></span></div>
+                <div class="text-blue-200 text-sm mb-6">
+                  <span data-lang="fr">Prix unique · Tout inclus · Livraison en 24H</span>
+                  <span data-lang="ar">سعر واحد · شامل كل شيء · تسليم في 24 ساعة</span>
+                </div>
+                <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20commander%20mon%20site%20web%20en%2024h%20!"
+                   class="btn-primary w-full justify-center mb-6 border-0" target="_blank" rel="noopener noreferrer">
+                  <span data-lang="fr">Commander maintenant via WhatsApp</span>
+                  <span data-lang="ar">اطلب الآن عبر واتساب</span>
+                </a>
+                <p class="text-blue-200 text-xs text-center">
+                  <span data-lang="fr">🔒 Paiement sécurisé · Satisfaction garantie · Révisions incluses</span>
+                  <span data-lang="ar">🔒 دفع آمن · رضا مضمون · مراجعات مشمولة</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CTA FINAL ======== -->
+    <section class="cta-banner py-20 text-white" aria-labelledby="cta-title">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h2 id="cta-title" class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 fade-up">
+          <span data-lang="fr">Prêt à lancer votre site<br/>en <span class="gradient-text">24 heures</span> ?</span>
+          <span data-lang="ar">مستعد لإطلاق موقعك<br/>في <span class="gradient-text">24 ساعة</span>؟</span>
+        </h2>
+        <p class="text-blue-100 text-lg mb-8 fade-up delay-100 max-w-2xl mx-auto">
+          <span data-lang="fr">Rejoignez les entrepreneurs marocains qui font confiance à toukrichtemed pour leur présence digitale. Contactez-nous maintenant sur WhatsApp !</span>
+          <span data-lang="ar">انضم إلى رواد الأعمال المغاربة الذين يثقون بـ toukrichtemed لحضورهم الرقمي. تواصل معنا الآن عبر واتساب!</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 fade-up delay-200">
+          <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20commander%20mon%20site%20web%20en%2024h%20!"
+             class="btn-whatsapp text-base" target="_blank" rel="noopener noreferrer">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span data-lang="fr">Démarrer sur WhatsApp</span>
+            <span data-lang="ar">ابدأ عبر واتساب</span>
+          </a>
+          <a href="portfolio.html" class="btn-secondary">
+            <span data-lang="fr">Voir nos réalisations</span>
+            <span data-lang="ar">شاهد أعمالنا</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="bg-gray-900 text-white pt-14 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <img src="images/logo.png" alt="toukrichtemed" class="h-9 w-auto" loading="lazy" />
+            <span class="font-bold text-xl">toukrichtemed</span>
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5 max-w-sm">
+            <span data-lang="fr">Votre partenaire digital au Maroc. Sites web professionnels livrés en 24H, propulsés par l'IA, au service des PME et TPE marocaines.</span>
+            <span data-lang="ar">شريكك الرقمي في المغرب. مواقع ويب احترافية تُسلَّم في 24 ساعة، مدعومة بالذكاء الاصطناعي، في خدمة المقاولات الصغيرة والمتوسطة.</span>
+          </p>
+          <div class="flex gap-3">
+            <a href="https://wa.me/212698921518" class="w-9 h-9 bg-whatsapp rounded-full flex items-center justify-center hover:opacity-80 transition-opacity" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+            <a href="mailto:toukrichtemed@gmail.com" class="w-9 h-9 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors" aria-label="Email">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="font-bold text-white mb-4 text-sm uppercase tracking-wider">
+            <span data-lang="fr">Navigation</span>
+            <span data-lang="ar">التنقل</span>
           </h3>
-          <ul class="problem__list">
-            <li>
-              <i data-lucide="eye-off"></i>
-              <div>
-                <strong data-i18n="problem.pain1Title">Invisibilité totale</strong>
-                <p data-i18n="problem.pain1Desc">Vos concurrents récupèrent vos clients potentiels sur Google</p>
-              </div>
-            </li>
-            <li>
-              <i data-lucide="thumbs-down"></i>
-              <div>
-                <strong data-i18n="problem.pain2Title">Image non professionnelle</strong>
-                <p data-i18n="problem.pain2Desc">Une simple page Facebook ne suffit plus pour inspirer confiance</p>
-              </div>
-            </li>
-            <li>
-              <i data-lucide="phone-off"></i>
-              <div>
-                <strong data-i18n="problem.pain3Title">Clients perdus 24h/24</strong>
-                <p data-i18n="problem.pain3Desc">Quand vous dormez, vos concurrents avec un site captent des leads</p>
-              </div>
-            </li>
-            <li>
-              <i data-lucide="ban"></i>
-              <div>
-                <strong data-i18n="problem.pain4Title">Crédibilité limitée</strong>
-                <p data-i18n="problem.pain4Desc">70% des clients ne font pas confiance à une entreprise sans site web</p>
-              </div>
-            </li>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-white transition-colors"><span data-lang="fr">Accueil</span><span data-lang="ar">الرئيسية</span></a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors"><span data-lang="fr">Services</span><span data-lang="ar">الخدمات</span></a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition-colors"><span data-lang="fr">Réalisations</span><span data-lang="ar">الأعمال</span></a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="fr">À Propos</span><span data-lang="ar">من نحن</span></a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors"><span data-lang="fr">Blog</span><span data-lang="ar">المدونة</span></a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="fr">Contact</span><span data-lang="ar">تواصل</span></a></li>
           </ul>
         </div>
 
-        <div class="problem__col problem__col--solution" data-animate="fade-up" data-delay="200">
-          <h3 class="problem__col-title problem__col-title--solution">
-            <i data-lucide="check-circle-2"></i>
-            <span data-i18n="problem.solTitle">Avec votre site web…</span>
+        <!-- Contact -->
+        <div>
+          <h3 class="font-bold text-white mb-4 text-sm uppercase tracking-wider">
+            <span data-lang="fr">Contact</span>
+            <span data-lang="ar">تواصل</span>
           </h3>
-          <ul class="problem__list">
+          <ul class="space-y-3 text-sm text-gray-400">
             <li>
-              <i data-lucide="search"></i>
-              <div>
-                <strong data-i18n="problem.sol1Title">Visible sur Google</strong>
-                <p data-i18n="problem.sol1Desc">Vos clients vous trouvent facilement quand ils cherchent vos services</p>
-              </div>
+              <a href="tel:+212698921518" class="hover:text-white transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +212 698 921 518
+              </a>
             </li>
             <li>
-              <i data-lucide="award"></i>
-              <div>
-                <strong data-i18n="problem.sol2Title">Image professionnelle</strong>
-                <p data-i18n="problem.sol2Desc">Un site moderne qui inspire confiance dès le premier regard</p>
-              </div>
+              <a href="mailto:toukrichtemed@gmail.com" class="hover:text-white transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                toukrichtemed@gmail.com
+              </a>
             </li>
             <li>
-              <i data-lucide="clock"></i>
-              <div>
-                <strong data-i18n="problem.sol3Title">Disponible 24h/24</strong>
-                <p data-i18n="problem.sol3Desc">Votre site travaille pour vous même quand vous êtes fermé</p>
-              </div>
-            </li>
-            <li>
-              <i data-lucide="trending-up"></i>
-              <div>
-                <strong data-i18n="problem.sol4Title">Plus de clients</strong>
-                <p data-i18n="problem.sol4Desc">Transformez les visiteurs en clients avec un site qui convertit</p>
-              </div>
+              <a href="https://wa.me/212698921518" class="hover:text-white transition-colors flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                <svg class="w-4 h-4 text-whatsapp flex-shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                WhatsApp
+              </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- L'OFFRE                                     -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="offer" id="offre">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="offer.tag">L'offre</span>
-        <h2 class="section-title" data-i18n="offer.title">Un site web complet, un prix transparent</h2>
-        <p class="section-subtitle" data-i18n="offer.subtitle">Pas de frais cachés, pas de surprises. Tout est inclus dans un forfait unique.</p>
-      </div>
-
-      <div class="offer__card" data-animate="fade-up">
-        <div class="offer__card-badge" data-i18n="offer.badge">Le plus populaire</div>
-        <div class="offer__card-header">
-          <h3 class="offer__card-name" data-i18n="offer.cardName">Site Vitrine Professionnel</h3>
-          <p class="offer__card-desc" data-i18n="offer.cardDesc">Tout ce dont votre entreprise a besoin pour briller en ligne</p>
-        </div>
-        <div class="offer__card-price">
-          <span class="offer__card-amount">5,000</span>
-          <span class="offer__card-currency" data-i18n="currency">DH</span>
-          <span class="offer__card-period" data-i18n="offer.period">tout compris</span>
-        </div>
-        <ul class="offer__card-features">
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f1">Site 5 à 7 pages personnalisées</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f2">Design moderne et responsive</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f3">Optimisé pour mobile et desktop</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f4">SEO de base inclus</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f5">Hébergement + domaine 1ère année</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f6">Bouton WhatsApp intégré</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f7">Google Maps + formulaire de contact</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f8">Google Analytics connecté</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f9">2 révisions incluses</span></li>
-          <li><i data-lucide="check"></i> <span data-i18n="offer.f10">Livraison en 24 heures</span></li>
-        </ul>
-        <div class="offer__card-cta">
-          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--primary btn--lg btn--full" target="_blank" rel="noopener">
-            <i data-lucide="message-circle"></i>
-            <span data-i18n="offer.cta">Démarrer mon site maintenant</span>
-          </a>
-          <p class="offer__card-note" data-i18n="offer.note">Paiement en 2 fois possible : 50% au démarrage, 50% à la livraison</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- CE QUI EST INCLUS                           -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="features" id="inclus">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="features.tag">Détails</span>
-        <h2 class="section-title" data-i18n="features.title">Tout est inclus dans votre forfait</h2>
-        <p class="section-subtitle" data-i18n="features.subtitle">Chaque fonctionnalité est pensée pour que votre site génère des résultats concrets.</p>
-      </div>
-
-      <div class="features__grid">
-        <div class="features__item" data-animate="fade-up">
-          <div class="features__icon"><i data-lucide="layout"></i></div>
-          <h3 data-i18n="features.h1">5 à 7 pages sur mesure</h3>
-          <p data-i18n="features.p1">Accueil, À propos, Services, Galerie, Contact — chaque page conçue pour convertir vos visiteurs en clients.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="100">
-          <div class="features__icon"><i data-lucide="smartphone"></i></div>
-          <h3 data-i18n="features.h2">Design responsive</h3>
-          <p data-i18n="features.p2">Votre site s'adapte parfaitement à tous les écrans — mobile, tablette et ordinateur. Mobile-first.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="200">
-          <div class="features__icon"><i data-lucide="search"></i></div>
-          <h3 data-i18n="features.h3">SEO de base</h3>
-          <p data-i18n="features.p3">Meta tags, titres optimisés, descriptions — pour que Google vous trouve et vous positionne.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="300">
-          <div class="features__icon"><i data-lucide="message-circle"></i></div>
-          <h3 data-i18n="features.h4">Bouton WhatsApp</h3>
-          <p data-i18n="features.p4">Un bouton flottant WhatsApp pour que vos clients vous contactent en un clic — le canal #1 au Maroc.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="400">
-          <div class="features__icon"><i data-lucide="map-pin"></i></div>
-          <h3 data-i18n="features.h5">Google Maps intégré</h3>
-          <p data-i18n="features.p5">Vos clients trouvent votre adresse facilement. Formulaire de contact fonctionnel inclus.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="500">
-          <div class="features__icon"><i data-lucide="bar-chart-3"></i></div>
-          <h3 data-i18n="features.h6">Google Analytics</h3>
-          <p data-i18n="features.p6">Suivez vos visiteurs, comprenez leur comportement et mesurez l'impact de votre site.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="600">
-          <div class="features__icon"><i data-lucide="server"></i></div>
-          <h3 data-i18n="features.h7">Hébergement inclus</h3>
-          <p data-i18n="features.p7">Hébergement rapide et sécurisé + nom de domaine — tout est inclus pour la première année.</p>
-        </div>
-        <div class="features__item" data-animate="fade-up" data-delay="700">
-          <div class="features__icon"><i data-lucide="refresh-cw"></i></div>
-          <h3 data-i18n="features.h8">2 révisions</h3>
-          <p data-i18n="features.p8">Pas satisfait du premier rendu ? Deux cycles de révision sont inclus pour un résultat parfait.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PROCESSUS                                   -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="process" id="processus">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="process.tag">Comment ça marche</span>
-        <h2 class="section-title" data-i18n="process.title">De la prise de contact à la mise en ligne en 24 heures</h2>
-        <p class="section-subtitle" data-i18n="process.subtitle">Un processus clair et transparent — vous savez exactement où en est votre projet.</p>
-      </div>
-
-      <div class="process__timeline">
-        <div class="process__step" data-animate="fade-up">
-          <div class="process__step-number">01</div>
-          <div class="process__step-content">
-            <h3 data-i18n="process.h1">Prise de contact</h3>
-            <p data-i18n="process.p1">Envoyez-moi un message sur WhatsApp. On discute de votre projet, vos besoins, vos objectifs. C'est gratuit et sans engagement.</p>
-          </div>
-          <div class="process__step-icon"><i data-lucide="message-circle"></i></div>
-        </div>
-        <div class="process__step" data-animate="fade-up" data-delay="100">
-          <div class="process__step-number">02</div>
-          <div class="process__step-content">
-            <h3 data-i18n="process.h2">Recueil du contenu</h3>
-            <p data-i18n="process.p2">Vous m'envoyez vos textes, photos, logo et informations. Je vous guide à chaque étape avec un questionnaire simple.</p>
-          </div>
-          <div class="process__step-icon"><i data-lucide="clipboard-list"></i></div>
-        </div>
-        <div class="process__step" data-animate="fade-up" data-delay="200">
-          <div class="process__step-number">03</div>
-          <div class="process__step-content">
-            <h3 data-i18n="process.h3">Création du design</h3>
-            <p data-i18n="process.p3">Je conçois votre site avec un design moderne et professionnel. Vous recevez une première version pour validation.</p>
-          </div>
-          <div class="process__step-icon"><i data-lucide="palette"></i></div>
-        </div>
-        <div class="process__step" data-animate="fade-up" data-delay="300">
-          <div class="process__step-number">04</div>
-          <div class="process__step-content">
-            <h3 data-i18n="process.h4">Révisions</h3>
-            <p data-i18n="process.p4">Vous me donnez vos retours. J'applique les modifications jusqu'à ce que le résultat vous plaise — 2 révisions incluses.</p>
-          </div>
-          <div class="process__step-icon"><i data-lucide="pencil"></i></div>
-        </div>
-        <div class="process__step" data-animate="fade-up" data-delay="400">
-          <div class="process__step-number">05</div>
-          <div class="process__step-content">
-            <h3 data-i18n="process.h5">Mise en ligne</h3>
-            <p data-i18n="process.p5">Votre site est publié, connecté à votre domaine, et prêt à accueillir vos premiers visiteurs. Vous payez le solde.</p>
-          </div>
-          <div class="process__step-icon"><i data-lucide="rocket"></i></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- ABOUT / CREDIBILITY                         -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about__inner" data-animate="fade-up">
-        <div class="about__photo">
-          <img src="images/mohamed-toukrichte.png?v=1.1" alt="Mohamed Toukrichte" class="about__photo-img" />
-        </div>
-        <div class="about__content">
-          <span class="section-tag" data-i18n="about.tag">Qui suis-je</span>
-          <h2 class="about__title" data-i18n="name">Mohamed Toukrichte</h2>
-          <p class="about__role" data-i18n="about.role">Ingénieur Logiciel — 10+ ans d'expérience</p>
-          <p class="about__text" data-i18n-html="about.text1">
-            Après plus de 10 ans d'expérience en développement logiciel au Maroc et à l'international, notamment
-            chez <strong>Ticketmaster</strong> (leader mondial de la billetterie), <strong>SFR</strong> (leader européen de télécommunication), j'ai choisi comme mission au Maroc : aider les entrepreneurs et PME marocaines à se
-            digitaliser avec des sites web aux <strong>standards internationaux</strong>.
-          </p>
-          <p class="about__text" data-i18n="about.text2">
-            Je combine expertise technique de haut niveau et compréhension du marché local pour
-            vous livrer un site web qui inspire confiance et génère des résultats.
-          </p>
-          <div class="about__stats">
-            <div class="about__stat">
-              <span class="about__stat-number">10+</span>
-              <span class="about__stat-label" data-i18n="about.stat1">Années d'expérience</span>
-            </div>
-            <div class="about__stat">
-              <span class="about__stat-number">30+</span>
-              <span class="about__stat-label" data-i18n="about.stat2">Projets livrés</span>
-            </div>
-            <div class="about__stat">
-              <span class="about__stat-number">100%</span>
-              <span class="about__stat-label" data-i18n="about.stat3">Clients satisfaits</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- TÉMOIGNAGES                                 -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="testimonials" id="temoignages">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="testimonials.tag">Témoignages</span>
-        <h2 class="section-title" data-i18n="testimonials.title">Ce que disent mes clients</h2>
-        <p class="section-subtitle" data-i18n="testimonials.subtitle">La satisfaction de mes clients est ma meilleure carte de visite.</p>
-      </div>
-
-      <div class="testimonials__slider" id="testimonialsSlider">
-        <div class="testimonials__track">
-          <div class="testimonials__card">
-            <div class="testimonials__stars">★★★★★</div>
-            <p class="testimonials__text" data-i18n="testimonials.t1">"Mohamed a créé notre site en 5 jours seulement. Le résultat est magnifique et nos clients nous trouvent maintenant facilement sur Google. Je recommande à 100%."</p>
-            <div class="testimonials__author">
-              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
-              <div>
-                <strong data-i18n="testimonials.a1Name">Ahmed K.</strong>
-                <span data-i18n="testimonials.a1Role">Restaurant — Casablanca</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonials__card">
-            <div class="testimonials__stars">★★★★★</div>
-            <p class="testimonials__text" data-i18n="testimonials.t2">"Très professionnel et réactif. Mohamed comprend les besoins des entreprises marocaines. Notre site est moderne et nos clientes adorent pouvoir nous contacter via WhatsApp directement."</p>
-            <div class="testimonials__author">
-              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
-              <div>
-                <strong data-i18n="testimonials.a2Name">Sara B.</strong>
-                <span data-i18n="testimonials.a2Role">Salon de beauté — Rabat</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonials__card">
-            <div class="testimonials__stars">★★★★★</div>
-            <p class="testimonials__text" data-i18n="testimonials.t3">"Excellent rapport qualité-prix. On a payé en deux fois, le site a été livré dans les temps. Depuis, on reçoit des demandes de rendez-vous directement via le site."</p>
-            <div class="testimonials__author">
-              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
-              <div>
-                <strong data-i18n="testimonials.a3Name">Dr. Youssef M.</strong>
-                <span data-i18n="testimonials.a3Role">Cabinet dentaire — Marrakech</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonials__card">
-            <div class="testimonials__stars">★★★★★</div>
-            <p class="testimonials__text" data-i18n="testimonials.t4">"Mohamed a parfaitement compris notre métier. Le site de creatif-pro.com reflète notre savoir-faire en peinture industrielle, époxy et résine. Depuis la mise en ligne, on reçoit des demandes de devis de tout le Maroc. Travail impeccable."</p>
-            <div class="testimonials__author">
-              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
-              <div>
-                <strong data-i18n="testimonials.a4Name">Abdeljalil</strong>
-                <span data-i18n="testimonials.a4Role">creatif-pro.com — Peinture industrielle, Époxy & Résine</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonials__card">
-            <div class="testimonials__stars">★★★★★</div>
-            <p class="testimonials__text" data-i18n="testimonials.t5">"On cherchait quelqu'un qui comprenne le secteur du BTP. Mohamed a livré un site professionnel pour entra-pt.com qui met en valeur nos réalisations. En 3 mois, on a doublé nos demandes de devis. Merci Mohamed !"</p>
-            <div class="testimonials__author">
-              <div class="testimonials__avatar"><i data-lucide="user"></i></div>
-              <div>
-                <strong data-i18n="testimonials.a5Name">Othmane Jitto</strong>
-                <span data-i18n="testimonials.a5Role">entra-pt.com — Construction & BTP</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonials__dots" id="testimonialsDots"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- GARANTIE / RÉASSURANCE                      -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="guarantee" id="garantie">
-    <div class="container">
-      <div class="guarantee__inner" data-animate="fade-up">
-        <div class="guarantee__icon">
-          <i data-lucide="shield-check"></i>
-        </div>
-        <div class="guarantee__content">
-          <h2 data-i18n="guarantee.title">Votre satisfaction est garantie</h2>
-          <div class="guarantee__points">
-            <div class="guarantee__point">
-              <i data-lucide="check-circle-2"></i>
-              <div>
-                <strong data-i18n="guarantee.p1Title">2 révisions incluses</strong>
-                <p data-i18n="guarantee.p1Desc">Pas satisfait du premier rendu ? Je modifie jusqu'à ce que le résultat vous plaise.</p>
-              </div>
-            </div>
-            <div class="guarantee__point">
-              <i data-lucide="check-circle-2"></i>
-              <div>
-                <strong data-i18n="guarantee.p2Title">Accompagnement personnalisé</strong>
-                <p data-i18n="guarantee.p2Desc">Je vous guide à chaque étape — pas de jargon technique, juste des résultats.</p>
-              </div>
-            </div>
-            <div class="guarantee__point">
-              <i data-lucide="check-circle-2"></i>
-              <div>
-                <strong data-i18n="guarantee.p3Title">Support après livraison</strong>
-                <p data-i18n="guarantee.p3Desc">Une question après la mise en ligne ? Je reste disponible sur WhatsApp pour vous aider.</p>
-              </div>
-            </div>
-            <div class="guarantee__point">
-              <i data-lucide="check-circle-2"></i>
-              <div>
-                <strong data-i18n="guarantee.p4Title">Paiement sécurisé en 2 fois</strong>
-                <p data-i18n="guarantee.p4Desc">50% au démarrage, 50% à la livraison — vous ne payez le solde que quand vous êtes satisfait.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- FAQ                                         -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-header" data-animate="fade-up">
-        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
-        <h2 class="section-title" data-i18n="faq.title">Questions fréquentes</h2>
-        <p class="section-subtitle" data-i18n="faq.subtitle">Tout ce que vous devez savoir avant de démarrer votre projet.</p>
-      </div>
-
-      <div class="faq__list" data-animate="fade-up">
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q1">Pourquoi seulement 24 heures ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a1">Grâce à mon expérience et à un processus de travail optimisé, je peux créer votre site rapidement sans sacrifier la qualité. Le délai de 24 heures commence dès que je reçois tout votre contenu (textes, photos, logo). Plus vous êtes réactif, plus vite votre site sera en ligne.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q2">Est-ce que je dois fournir le contenu ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a2">Idéalement oui — vous connaissez mieux votre entreprise que quiconque. Mais ne vous inquiétez pas : je vous envoie un questionnaire simple pour vous guider. Si vous n'avez pas de photos professionnelles, je peux utiliser des images de qualité adaptées à votre secteur.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q3">Est-ce que je peux modifier le site après la livraison ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a3">Oui ! Après la livraison, vous pouvez demander des modifications mineures. Pour des changements réguliers, je propose un forfait maintenance à 500 DH/mois qui inclut les mises à jour, modifications et support prioritaire.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q4">Que se passe-t-il après la 1ère année d'hébergement ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a4">L'hébergement et le domaine sont inclus pour la première année. Ensuite, le renouvellement est de 500 DH/an — un investissement minimal pour garder votre site en ligne 24h/24.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q5">Comment se fait le paiement ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a5">Le paiement se fait en 2 fois : 50% au démarrage du projet (2,500 DH) et 50% à la livraison finale (2,500 DH). J'accepte le virement bancaire, CashPlus, Wafacash ou espèces avec reçu.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span data-i18n="faq.q6">Mon site sera-t-il visible sur Google ?</span>
-            <i data-lucide="chevron-down"></i>
-          </button>
-          <div class="faq__answer">
-            <p data-i18n="faq.a6">Oui ! Le SEO de base est inclus : meta tags, titres optimisés, descriptions, et soumission à Google. Votre site sera indexé et commencera à apparaître dans les résultats de recherche. Pour un référencement avancé, des options supplémentaires sont disponibles.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- CTA FINAL                                   -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="cta-final" id="contact">
-    <div class="container">
-      <div class="cta-final__inner" data-animate="fade-up">
-        <div class="cta-final__bg-effects">
-          <div class="cta-final__orb cta-final__orb--1"></div>
-          <div class="cta-final__orb cta-final__orb--2"></div>
-        </div>
-        <h2 class="cta-final__title" data-i18n="cta.title">Prêt à lancer votre site web ?</h2>
-        <p class="cta-final__text" data-i18n="cta.text">
-          Rejoignez les entrepreneurs qui ont fait le choix de la visibilité en ligne.
-          Votre site professionnel est à 24 heures de devenir réalité.
+      <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <p>
+          <span data-lang="fr">© 2026 toukrichtemed. Tous droits réservés.</span>
+          <span data-lang="ar">© 2026 toukrichtemed. جميع الحقوق محفوظة.</span>
         </p>
-        <div class="cta-final__price">
-          <span data-i18n="cta.priceFrom">À partir de</span>
-          <strong>5,000 <span data-i18n="currency">DH</span></strong>
-          <span data-i18n="cta.priceAll">tout compris</span>
-        </div>
-        <div class="cta-final__buttons">
-          <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="btn btn--white btn--lg" target="_blank" rel="noopener">
-            <i data-lucide="message-circle"></i>
-            <span data-i18n="cta.whatsapp">Discuter sur WhatsApp</span>
-          </a>
-          <a href="mailto:toukrichtemed@gmail.com" class="btn btn--outline-white btn--lg">
-            <i data-lucide="mail"></i>
-            <span data-i18n="cta.email">Envoyer un email</span>
-          </a>
-        </div>
-        <p class="cta-final__reassurance">
-          <i data-lucide="clock"></i>
-          <span data-i18n="cta.reassurance">Réponse garantie en moins de 5 minutes pendant les heures de travail</span>
+        <p class="flex items-center gap-1">
+          <span data-lang="fr">Conçu &amp; développé avec</span>
+          <span data-lang="ar">مُصمَّم ومطوَّر بـ</span>
+          <span class="text-red-400" aria-hidden="true">❤</span>
+          <span data-lang="fr">au Maroc</span>
+          <span data-lang="ar">في المغرب</span>
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- FOOTER                                      -->
-  <!-- ═══════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <div class="footer__logo">
-            <img src="images/logo.png?v=1.1" alt="Mohamed Toukrichte" class="navbar__logo-img" />
-            <span class="navbar__logo-slogan" data-i18n="nav.slogan">Puissance digitale sur mesure</span>
-          </div>
-          <p data-i18n="footer.desc">Création de sites web professionnels pour entrepreneurs et PME.</p>
-        </div>
-        <div class="footer__links">
-          <h4 data-i18n="footer.navTitle">Navigation</h4>
-          <a href="#offre" data-i18n="footer.nav1">L'offre</a>
-          <a href="#inclus" data-i18n="footer.nav2">Ce qui est inclus</a>
-          <a href="#processus" data-i18n="footer.nav3">Processus</a>
-          <a href="#temoignages" data-i18n="footer.nav4">Témoignages</a>
-          <a href="#faq" data-i18n="footer.nav5">FAQ</a>
-        </div>
-        <div class="footer__contact">
-          <h4 data-i18n="footer.contactTitle">Contact</h4>
-          <a href="https://wa.me/212698921518" target="_blank" rel="noopener">
-            <i data-lucide="message-circle"></i> WhatsApp
-          </a>
-          <a href="mailto:toukrichtemed@gmail.com">
-            <i data-lucide="mail"></i> toukrichtemed@gmail.com
-          </a>
-          <a href="#">
-            <i data-lucide="map-pin"></i> <span data-i18n="footer.location">Casablanca, Maroc</span>
-          </a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p data-i18n="footer.copyright">&copy; {year} Mohamed Toukrichte. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- WHATSAPP FLOATING BUTTON                    -->
-  <!-- ═══════════════════════════════════════════ -->
-  <a href="https://wa.me/212698921518?text=Bonjour%20Mohamed%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20cr%C3%A9ation%20d%27un%20site%20web." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
-    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.14l5.944-1.96A15.906 15.906 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.312 22.618c-.392 1.1-1.932 2.014-3.166 2.282-.846.18-1.952.324-5.674-1.22-4.762-1.974-7.826-6.81-8.066-7.126-.23-.316-1.932-2.574-1.932-4.908 0-2.334 1.222-3.48 1.656-3.956.392-.432 1.042-.632 1.664-.632.2 0 .38.01.542.018.476.02.714.048 1.028.794.392.932 1.348 3.266 1.466 3.504.12.238.238.544.078.86-.15.324-.282.526-.52.81-.238.286-.5.638-.714.856-.238.246-.486.512-.21.988.278.476 1.236 2.038 2.654 3.302 1.822 1.624 3.356 2.126 3.832 2.364.476.238.754.198 1.032-.12.286-.324 1.222-1.42 1.548-1.908.318-.486.644-.406 1.082-.244.442.158 2.774 1.308 3.25 1.546.476.238.794.358.912.554.116.196.116 1.138-.276 2.236z"/>
-    </svg>
-    <span class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">Besoin d'aide ?</span>
+  <!-- ======== WhatsApp Floating Button ======== -->
+  <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20souhaite%20un%20site%20web%20en%2024h%20!"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
-  <!-- Scroll to top button -->
-  <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
-    <i data-lucide="arrow-up"></i>
+  <!-- ======== Scroll to Top Button ======== -->
+  <button id="scroll-top" aria-label="Retour en haut de page">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
   </button>
 
-  <!-- Scripts -->
-  <script src="js/main.js?v=1.1"></script>
+  <!-- ======== JavaScript ======== -->
+  <script src="js/main.js"></script>
 </body>
 </html>
