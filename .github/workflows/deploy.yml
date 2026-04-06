@@ -8,6 +8,10 @@ concurrency:
   group: deploy-toukrichtemed
   cancel-in-progress: true
 
+env:
+  PROJECT_DIR: ~/projects/toukrichtemed
+  CONTAINER_NAME: toukrichtemed_web
+
 jobs:
   deploy:
     name: Deploy to VPS
@@ -20,13 +24,50 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ~/projects/toukrichtemed
-            echo "=== Pulling latest code ==="
-            git pull origin main
-            echo "=== Building image ==="
-            docker compose build --no-cache
-            echo "=== Deploying ==="
-            docker compose up -d
-            echo "=== Cleaning up ==="
+            set -e
+            
+            echo "=========================================="
+            echo "🚀 Starting Deployment: toukrichtemed24"
+            echo "=========================================="
+            
+            cd ${{ env.PROJECT_DIR }} || { echo "❌ Directory not found"; exit 1; }
+            
+            echo ""
+            echo "📥 Pulling latest code from main branch..."
+            git pull origin main --ff-only || { echo "❌ Git pull failed"; exit 1; }
+            echo "✅ Code updated successfully"
+            
+            echo ""
+            echo "📝 Current commit:"
+            git log -1 --oneline
+            
+            echo ""
+            echo "🏗️  Building Docker image (--no-cache)..."
+            docker compose build --no-cache || { echo "❌ Build failed"; exit 1; }
+            echo "✅ Build completed"
+            
+            echo ""
+            echo "🛑 Stopping old container..."
+            docker stop ${{ env.CONTAINER_NAME }} 2>/dev/null || true
+            docker rm ${{ env.CONTAINER_NAME }} 2>/dev/null || true
+            echo "✅ Old container removed"
+            
+            echo ""
+            echo "🚀 Starting new container..."
+            docker compose up -d || { echo "❌ Container startup failed"; exit 1; }
+            sleep 2
+            echo "✅ Container started"
+            
+            echo ""
+            echo "🧪 Health check..."
+            docker compose ps
+            
+            echo ""
+            echo "🧹 Cleaning up unused images..."
             docker image prune -f
-            echo "=== Deploy complete ==="
+            echo "✅ Cleanup complete"
+            
+            echo ""
+            echo "=========================================="
+            echo "✅ Deployment completed successfully!"
+            echo "=========================================="
