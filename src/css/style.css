@@ -197,20 +197,42 @@ html[lang="ar"] .nav-link::after {
   align-items: center;
   gap: 0.5rem;
   background: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+/* Secondary button for dark/colored backgrounds */
+.btn-secondary-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
   color: white;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 9999px;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
   cursor: pointer;
-  transition: background-color var(--transition-base), border-color var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
 }
 
-.btn-secondary:hover {
+.btn-secondary-light:hover {
   background-color: white;
   border-color: white;
-  color: black;
+  color: var(--color-primary);
 }
 
 .btn-whatsapp {
