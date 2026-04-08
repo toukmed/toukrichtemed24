@@ -3,8 +3,7 @@
    Complements Tailwind CSS
    ================================ */
 
-/* ---- Google Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap');
+/* ---- Google Fonts (loaded via <link> in HTML) ---- */
 
 /* ---- CSS Variables ---- */
 :root {
@@ -69,16 +68,16 @@ html[lang="ar"] label {
 }
 
 /* ---- Bilinguisme : visibilité ---- */
-[data-lang="ar"] { display: none; }
-html[lang="ar"] [data-lang="fr"] { display: none; }
-html[lang="ar"] [data-lang="ar"] { display: revert; }
+[data-lang="ar"] { display: none !important; }
+html[lang="ar"] [data-lang="fr"] { display: none !important; }
+html[lang="ar"] [data-lang="ar"] { display: revert !important; }
 
 /* Pour les éléments block spécifiques */
-html[lang="ar"] [data-lang="ar"].block { display: block; }
-html[lang="ar"] [data-lang="ar"].flex { display: flex; }
-html[lang="ar"] [data-lang="ar"].grid { display: grid; }
-html[lang="ar"] [data-lang="ar"].inline { display: inline; }
-html[lang="ar"] [data-lang="ar"].inline-flex { display: inline-flex; }
+html[lang="ar"] [data-lang="ar"].block { display: block !important; }
+html[lang="ar"] [data-lang="ar"].flex { display: flex !important; }
+html[lang="ar"] [data-lang="ar"].grid { display: grid !important; }
+html[lang="ar"] [data-lang="ar"].inline { display: inline !important; }
+html[lang="ar"] [data-lang="ar"].inline-flex { display: inline-flex !important; }
 
 /* ---- Navigation ---- */
 .nav-link {
