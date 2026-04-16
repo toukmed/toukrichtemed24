@@ -96,170 +96,12 @@
     <section class="py-20 bg-gray-50" aria-labelledby="portfolio-grid-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="portfolio-grid-title" class="sr-only">Grille des réalisations</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- Project 1 -->
-          <article class="portfolio-card fade-up">
-            <div class="relative h-52 overflow-hidden bg-gray-200">
-              <img src="images/site-exemple.jpg" alt="Site web restaurant moroccan — exemple création en 24H" class="w-full h-full object-cover" loading="lazy" />
-              <div class="portfolio-card-overlay">
-                <div class="text-white">
-                  <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">Restaurant · Casablanca</div>
-                  <div class="text-xs font-semibold text-blue-200 mb-1 hidden" data-lang="ar">مطعم · الدار البيضاء</div>
-                  <div class="font-bold" data-lang="fr">La Maison du Goût</div>
-                  <div class="font-bold hidden" data-lang="ar">بيت الذوق</div>
-                </div>
-              </div>
-              <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center justify-between mb-2">
-                <span class="badge badge-accent text-xs" data-lang="fr">Restaurant</span>
-                <span class="badge badge-accent text-xs hidden" data-lang="ar">مطعم</span>
-                <span class="text-xs text-gray-400 font-mono" data-lang="fr">Livré en 18H</span>
-                <span class="text-xs text-gray-400 font-mono hidden" data-lang="ar">سُلِّم في 18 ساعة</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">La Maison du Goût</h3>
-              <h3 class="font-bold text-gray-900 mb-2 hidden" data-lang="ar">بيت الذوق</h3>
-              <p class="text-gray-600 text-sm mb-4" data-lang="fr">Site vitrine avec menu interactif, galerie photos, réservation via WhatsApp et localisation Google Maps.</p>
-              <p class="text-gray-600 text-sm mb-4 hidden" data-lang="ar">موقع عرض مع قائمة طعام تفاعلية وصور وحجز عبر واتساب وموقع جغرافي.</p>
-              <a href="#" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="Voir le site La Maison du Goût (lien exemple)" target="_blank" rel="noopener noreferrer">
-                <span data-lang="fr">Voir le site</span><span data-lang="ar">مشاهدة الموقع</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </article>
+          <!-- Projects are injected dynamically from portfolio-projects.json -->
 
-          <!-- Project 2 -->
-          <article class="portfolio-card fade-up delay-100">
-            <div class="relative h-52 overflow-hidden bg-gray-200">
-              <img src="images/site-exemple-ar.jpg" alt="Site web cabinet comptable — exemple création en 24H" class="w-full h-full object-cover" loading="lazy" />
-              <div class="portfolio-card-overlay">
-                <div class="text-white">
-                  <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">Cabinet Comptable · Rabat</div>
-                  <div class="text-xs font-semibold text-blue-200 mb-1 hidden" data-lang="ar">مكتب محاسبة · الرباط</div>
-                  <div class="font-bold" data-lang="fr">Comptabilité Pro</div>
-                  <div class="font-bold hidden" data-lang="ar">محاسبة برو</div>
-                </div>
-              </div>
-              <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center justify-between mb-2">
-                <span class="badge badge-primary text-xs" data-lang="fr">Cabinet Pro</span>
-                <span class="badge badge-primary text-xs hidden" data-lang="ar">مكتب مهني</span>
-                <span class="text-xs text-gray-400 font-mono" data-lang="fr">Livré en 22H</span>
-                <span class="text-xs text-gray-400 font-mono hidden" data-lang="ar">سُلِّم في 22 ساعة</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">Comptabilité Pro Maroc</h3>
-              <h3 class="font-bold text-gray-900 mb-2 hidden" data-lang="ar">محاسبة برو المغرب</h3>
-              <p class="text-gray-600 text-sm mb-4" data-lang="fr">Site professionnel avec présentation des services, expertise du cabinet, formulaire de contact et prise de rendez-vous.</p>
-              <p class="text-gray-600 text-sm mb-4 hidden" data-lang="ar">موقع احترافي مع عرض الخدمات وكفاءات المكتب ونموذج تواصل وحجز مواعيد.</p>
-              <a href="#" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="Voir le site (lien exemple)" target="_blank" rel="noopener noreferrer">
-                <span data-lang="fr">Voir le site</span><span data-lang="ar">مشاهدة الموقع</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="portfolio-card fade-up delay-200">
-            <div class="relative h-52 overflow-hidden bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
-              <span class="text-6xl" aria-hidden="true">🛍️</span>
-              <div class="portfolio-card-overlay">
-                <div class="text-white">
-                  <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">Boutique · Marrakech</div>
-                  <div class="text-xs font-semibold text-blue-200 mb-1 hidden" data-lang="ar">متجر · مراكش</div>
-                  <div class="font-bold" data-lang="fr">Artisanat Marrakchi</div>
-                  <div class="font-bold hidden" data-lang="ar">الصناعة التقليدية المراكشية</div>
-                </div>
-              </div>
-              <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center justify-between mb-2">
-                <span class="badge text-xs bg-purple-50 text-purple-700" data-lang="fr">Artisanat</span>
-                <span class="badge text-xs bg-purple-50 text-purple-700 hidden" data-lang="ar">الصناعة التقليدية</span>
-                <span class="text-xs text-gray-400 font-mono" data-lang="fr">Livré en 20H</span>
-                <span class="text-xs text-gray-400 font-mono hidden" data-lang="ar">سُلِّم في 20 ساعة</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">Artisanat Marrakchi</h3>
-              <h3 class="font-bold text-gray-900 mb-2 hidden" data-lang="ar">الصناعة التقليدية المراكشية</h3>
-              <p class="text-gray-600 text-sm mb-4" data-lang="fr">Site catalogue avec galerie de produits artisanaux, contact WhatsApp et présentation de l'atelier familial.</p>
-              <p class="text-gray-600 text-sm mb-4 hidden" data-lang="ar">موقع كتالوج مع معرض منتجات حرفية وتواصل واتساب وتعريف بالورشة العائلية.</p>
-              <a href="#" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="Voir le site artisanat (lien exemple)" target="_blank" rel="noopener noreferrer">
-                <span data-lang="fr">Voir le site</span><span data-lang="ar">مشاهدة الموقع</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 4 -->
-          <article class="portfolio-card fade-up">
-            <div class="relative h-52 overflow-hidden bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center">
-              <span class="text-6xl" aria-hidden="true">🏥</span>
-              <div class="portfolio-card-overlay">
-                <div class="text-white">
-                  <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">Santé · Fès</div>
-                  <div class="text-xs font-semibold text-blue-200 mb-1 hidden" data-lang="ar">صحة · فاس</div>
-                  <div class="font-bold" data-lang="fr">Cabinet Médical Fès</div>
-                  <div class="font-bold hidden" data-lang="ar">عيادة طبية فاس</div>
-                </div>
-              </div>
-              <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center justify-between mb-2">
-                <span class="badge text-xs bg-teal-50 text-teal-700" data-lang="fr">Médical</span>
-                <span class="badge text-xs bg-teal-50 text-teal-700 hidden" data-lang="ar">طبي</span>
-                <span class="text-xs text-gray-400 font-mono" data-lang="fr">Livré en 19H</span>
-                <span class="text-xs text-gray-400 font-mono hidden" data-lang="ar">سُلِّم في 19 ساعة</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">Dr. Bennani — Cabinet Médical</h3>
-              <h3 class="font-bold text-gray-900 mb-2 hidden" data-lang="ar">د. بناني — عيادة طبية</h3>
-              <p class="text-gray-600 text-sm mb-4" data-lang="fr">Site médical avec présentation du praticien, spécialités, horaires de consultation et prise de rendez-vous via WhatsApp.</p>
-              <p class="text-gray-600 text-sm mb-4 hidden" data-lang="ar">موقع طبي مع تعريف بالطبيب والتخصصات وأوقات العمل وأخذ مواعيد عبر واتساب.</p>
-              <a href="#" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="Voir le site médical (lien exemple)" target="_blank" rel="noopener noreferrer">
-                <span data-lang="fr">Voir le site</span><span data-lang="ar">مشاهدة الموقع</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 5 -->
-          <article class="portfolio-card fade-up delay-100">
-            <div class="relative h-52 overflow-hidden bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
-              <span class="text-6xl" aria-hidden="true">🔧</span>
-              <div class="portfolio-card-overlay">
-                <div class="text-white">
-                  <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">Plomberie · Tanger</div>
-                  <div class="text-xs font-semibold text-blue-200 mb-1 hidden" data-lang="ar">سباكة · طنجة</div>
-                  <div class="font-bold" data-lang="fr">Plomberie Express 24H</div>
-                  <div class="font-bold hidden" data-lang="ar">سباكة اكسبريس</div>
-                </div>
-              </div>
-              <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center justify-between mb-2">
-                <span class="badge text-xs bg-yellow-50 text-yellow-700" data-lang="fr">Artisan</span>
-                <span class="badge text-xs bg-yellow-50 text-yellow-700 hidden" data-lang="ar">حرفي</span>
-                <span class="text-xs text-gray-400 font-mono" data-lang="fr">Livré en 16H</span>
-                <span class="text-xs text-gray-400 font-mono hidden" data-lang="ar">سُلِّم في 16 ساعة</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">Plomberie Express Tanger</h3>
-              <h3 class="font-bold text-gray-900 mb-2 hidden" data-lang="ar">سباكة إكسبريس طنجة</h3>
-              <p class="text-gray-600 text-sm mb-4" data-lang="fr">Site artisan avec liste des interventions, zone de couverture, avis clients et bouton d'urgence WhatsApp.</p>
-              <p class="text-gray-600 text-sm mb-4 hidden" data-lang="ar">موقع حرفي مع قائمة التدخلات ومنطقة التغطية وآراء العملاء وزر طوارئ واتساب.</p>
-              <a href="#" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="Voir le site (lien exemple)" target="_blank" rel="noopener noreferrer">
-                <span data-lang="fr">Voir le site</span><span data-lang="ar">مشاهدة الموقع</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 6 - Your site next -->
-          <article class="portfolio-card fade-up delay-200 border-2 border-dashed border-primary/30 bg-primary/5 flex flex-col items-center justify-center text-center p-8">
+          <!-- CTA card — always last -->
+          <article class="portfolio-cta portfolio-card fade-up delay-200 border-2 border-dashed border-primary/30 bg-primary/5 flex flex-col items-center justify-center text-center p-8">
             <div class="text-5xl mb-4" aria-hidden="true">🚀</div>
             <h3 class="font-bold text-xl text-primary mb-3" data-lang="fr">Votre site ici !</h3>
             <h3 class="font-bold text-xl text-primary mb-3 hidden" data-lang="ar">موقعك هنا!</h3>
@@ -308,7 +150,7 @@
           </div>
 
           <!-- Après -->
-          <div class="card bg-primary text-white">
+          <div class="card text-white" style="background: var(--color-primary);">
             <div class="flex items-center gap-3 mb-5">
               <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">✓</div>
               <h3 class="font-bold text-xl" data-lang="fr">Après 24H</h3>
@@ -387,6 +229,7 @@
 
   <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20veux%20un%20site%20en%2024h%20!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
   <button id="scroll-top" aria-label="Retour en haut de page"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/portfolio-projects.js"></script>
   <script src="js/main.js?v=2"></script>
 </body>
 </html>

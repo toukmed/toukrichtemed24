@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Votre Site Web Demain &mdash; 5 000 DH Tout Inclus | toukrichtemed</title>
+  <meta name="description" content="Arr&ecirc;tez de perdre des clients. Site web professionnel livr&eacute; en 24H pour 5 000 DH. Design, SEO, h&eacute;bergement, domaine inclus." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://toukrichtemed.com/offre2-24h.html" />
+  <meta property="og:title" content="Site Web en 24H &mdash; 5 000 DH Tout Inclus | toukrichtemed" />
+  <meta property="og:description" content="Ne laissez plus vos concurrents prendre vos clients. Site professionnel pr&ecirc;t demain." />
+  <meta property="og:url" content="https://toukrichtemed.com/offre2-24h.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://toukrichtemed.com/images/logo.png" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="css/tailwind.min.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <style>
+    :root {
+      --v-violet: #6D28D9;
+      --v-violet-light: #8B5CF6;
+      --v-violet-dark: #5B21B6;
+      --v-amber: #F59E0B;
+      --v-dark: #0F0F1A;
+      --v-indigo: #1E1B4B;
+    }
+    .v-hero {
+      background: linear-gradient(135deg, #0F0F1A 0%, #1E1B4B 50%, #312E81 100%);
+      position: relative; overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center;
+    }
+    .v-hero::before {
+      content: ''; position: absolute; top: 5%; right: -10%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(109,40,217,.2) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+      animation: v-float 8s ease-in-out infinite;
+    }
+    .v-hero::after {
+      content: ''; position: absolute; bottom: -15%; left: -8%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,158,11,.1) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+      animation: v-float 6s ease-in-out infinite reverse;
+    }
+    @keyframes v-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .v-feature-card {
+      background: white; border: 1px solid #E5E7EB;
+      border-radius: 1rem; padding: 1.75rem;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .v-feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(109,40,217,.08);
+      border-color: rgba(109,40,217,.25);
+    }
+    .v-feature-icon {
+      width: 3rem; height: 3rem; border-radius: .75rem;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+    }
+    .v-project {
+      border-radius: 1.25rem; overflow: hidden; background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .v-project:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(109,40,217,.12); }
+    .v-project img { width: 100%; height: 220px; object-fit: cover; }
+    .v-step-dot {
+      width: 3.5rem; height: 3.5rem; border-radius: 50%;
+      background: var(--v-violet); color: white; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto .75rem; position: relative; z-index: 2;
+      box-shadow: 0 4px 15px rgba(109,40,217,.3);
+    }
+    .btn-violet {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: linear-gradient(135deg, var(--v-violet), var(--v-violet-dark));
+      color: white; font-weight: 600; padding: .875rem 2rem; border-radius: 9999px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: transform .15s, box-shadow .3s;
+      box-shadow: 0 4px 15px rgba(109,40,217,.35);
+    }
+    .btn-violet:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(109,40,217,.5); }
+    .btn-violet:active { transform: none; }
+    .btn-ghost-violet {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: transparent; color: white; font-weight: 600;
+      padding: .875rem 2rem; border-radius: 9999px;
+      text-decoration: none; border: 2px solid rgba(255,255,255,.25); cursor: pointer;
+      transition: background .3s;
+    }
+    .btn-ghost-violet:hover { background: rgba(255,255,255,.08); }
+    .v-stat {
+      font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 900; line-height: 1;
+      background: linear-gradient(135deg, #8B5CF6, #F59E0B);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .text-violet-grad {
+      background: linear-gradient(90deg, #8B5CF6, #F59E0B);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .v-calc {
+      background: linear-gradient(135deg, #F5F3FF, #EDE9FE);
+      border: 2px solid #C4B5FD; border-radius: 1.5rem; padding: 2.5rem;
+    }
+    .v-calc-result {
+      background: var(--v-violet); color: white;
+      border-radius: 1rem; padding: 1.5rem 2rem; text-align: center;
+    }
+    .v-cta-bg {
+      background: linear-gradient(145deg, #0F0F1A, #1E1B4B, #312E81);
+      position: relative; overflow: hidden;
+    }
+    .v-cta-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(139,92,246,.03) 50px, rgba(139,92,246,.03) 51px),
+                  repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(139,92,246,.03) 50px, rgba(139,92,246,.03) 51px);
+    }
+    .v-form {
+      background: white; border-radius: 1.5rem; padding: 2.5rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,.18); border-top: 4px solid var(--v-violet);
+    }
+    .v-value-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: .875rem; padding: 1rem 1.25rem;
+      display: flex; align-items: center; gap: .875rem;
+    }
+    .v-success {
+      display: none; background: #F5F3FF; border: 2px solid #C4B5FD;
+      border-radius: 1rem; padding: 2rem; text-align: center;
+    }
+    .v-form-wrap.submitted .v-form { display: none; }
+    .v-form-wrap.submitted .v-success { display: block; }
+    @media (max-width: 640px) {
+      .btn-violet, .btn-ghost-violet { padding: .75rem 1.5rem; font-size: .9rem; }
+      .v-form { padding: 1.5rem; }
+      .v-calc { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-[#0F0F1A]/95 backdrop-blur-sm border-b border-white/5 py-3 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3" aria-label="toukrichtemed">
+        <img src="images/logo.png" alt="toukrichtemed logo" class="h-8 w-auto" loading="eager" />
+        <span class="font-bold text-lg text-white hidden sm:block">toukrichtemed</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <button class="lang-btn" style="border-color:rgba(255,255,255,.2);color:white;" aria-label="Changer la langue">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="lang-btn-label">&#1593;&#1585;&#1576;&#1610;&#1577;</span>
+        </button>
+        <a href="#v-form" class="btn-violet text-sm">
+          <span data-lang="fr">Obtenir mon site</span>
+          <span data-lang="ar">&#1575;&#1581;&#1589;&#1604; &#1593;&#1604;&#1609; &#1605;&#1608;&#1602;&#1593;&#1603;</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="v-hero pt-20 pb-16" aria-labelledby="v-h1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="fade-up mb-5">
+            <span class="badge" style="background:rgba(139,92,246,.15);color:#C4B5FD;">
+              <span data-lang="fr">+10 ans d&#8217;expertise web au Maroc</span>
+              <span data-lang="ar">+10 &#1587;&#1606;&#1608;&#1575;&#1578; &#1605;&#1606; &#1575;&#1604;&#1582;&#1576;&#1585;&#1577; &#1601;&#1610; &#1575;&#1604;&#1608;&#1610;&#1576; &#1576;&#1575;&#1604;&#1605;&#1594;&#1585;&#1576;</span>
+            </span>
+          </div>
+          <h1 id="v-h1" class="fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white mb-6">
+            <span data-lang="fr">
+              Votre site web.<br/>
+              Livr&#233; <span class="text-violet-grad">demain</span>.<br/>
+              Pas dans 6 semaines.
+            </span>
+            <span data-lang="ar" style="line-height:1.6">
+              &#1605;&#1608;&#1602;&#1593;&#1603; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610;.<br/>
+              &#1610;&#1615;&#1587;&#1604;&#1617;&#1605; <span class="text-violet-grad">&#1594;&#1583;&#1575;&#1611;</span>.<br/>
+              &#1604;&#1610;&#1587; &#1576;&#1593;&#1583; 6 &#1571;&#1587;&#1575;&#1576;&#1610;&#1593;.
+            </span>
+          </h1>
+          <p class="fade-up delay-200 text-lg sm:text-xl text-white mb-10 max-w-2xl mx-auto leading-relaxed">
+            <span data-lang="fr">Site professionnel <strong class="text-price-shine">5 000 DH tout inclus</strong> &#8212; design, SEO, h&#233;bergement, domaine. Vous recevez un aper&#231;u avant de payer quoi que ce soit.</span>
+            <span data-lang="ar">&#1605;&#1608;&#1602;&#1593; &#1575;&#1581;&#1578;&#1585;&#1575;&#1601;&#1610; <strong class="text-price-shine">5,000 &#1583;&#1585;&#1607;&#1605; &#1588;&#1575;&#1605;&#1604;</strong> &#8212; &#1578;&#1589;&#1605;&#1610;&#1605;&#1548; SEO&#1548; &#1575;&#1587;&#1578;&#1590;&#1575;&#1601;&#1577;&#1548; &#1583;&#1608;&#1605;&#1610;&#1606;. &#1578;&#1581;&#1589;&#1604; &#1593;&#1604;&#1609; &#1605;&#1593;&#1575;&#1610;&#1606;&#1577; &#1602;&#1576;&#1604; &#1571;&#1610; &#1583;&#1601;&#1593;.</span>
+          </p>
+          <div class="fade-up delay-300 flex flex-wrap justify-center gap-4 mb-14">
+            <a href="#v-form" class="btn-violet text-base">
+              <span data-lang="fr">Commencer maintenant</span>
+              <span data-lang="ar">&#1575;&#1576;&#1583;&#1571; &#1575;&#1604;&#1570;&#1606;</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </a>
+            <a href="#v-projects" class="btn-ghost-violet text-base">
+              <span data-lang="fr">Voir nos r&#233;alisations</span>
+              <span data-lang="ar">&#1588;&#1575;&#1607;&#1583; &#1571;&#1593;&#1605;&#1575;&#1604;&#1606;&#1575;</span>
+            </a>
+          </div>
+          <div class="fade-up delay-400 grid grid-cols-3 gap-4 max-w-md mx-auto">
+            <div class="text-center">
+              <div class="v-stat">24H</div>
+              <p class="text-gray-400 text-xs mt-1"><span data-lang="fr">Livraison</span><span data-lang="ar">&#1578;&#1587;&#1604;&#1610;&#1605;</span></p>
+            </div>
+            <div class="text-center">
+              <div class="v-stat" dir="ltr">5K</div>
+              <p class="text-gray-400 text-xs mt-1"><span data-lang="fr">DH tout inclus</span><span data-lang="ar">&#1583;&#1585;&#1607;&#1605; &#1588;&#1575;&#1605;&#1604;</span></p>
+            </div>
+            <div class="text-center">
+              <div class="v-stat">10+</div>
+              <p class="text-gray-400 text-xs mt-1"><span data-lang="fr">Ans d&#8217;expertise</span><span data-lang="ar">&#1587;&#1606;&#1608;&#1575;&#1578; &#1582;&#1576;&#1585;&#1577;</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-16 sm:py-20 bg-white" aria-labelledby="feat-h2">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="badge mb-4" style="background:rgba(245,158,11,.12);color:#D97706;">
+            <span data-lang="fr">Tout inclus dans 5 000 DH</span>
+            <span data-lang="ar">&#1603;&#1604; &#1588;&#1610;&#1569; &#1605;&#1588;&#1605;&#1608;&#1604; &#1601;&#1610; 5,000 &#1583;&#1585;&#1607;&#1605;</span>
+          </span>
+          <h2 id="feat-h2" class="section-title fade-up">
+            <span data-lang="fr">Tout ce dont votre business a <span class="text-violet-grad">besoin</span></span>
+            <span data-lang="ar">&#1603;&#1604; &#1605;&#1575; &#1610;&#1581;&#1578;&#1575;&#1580;&#1607; <span class="text-violet-grad">&#1593;&#1605;&#1604;&#1603;</span></span>
+          </h2>
+          <div class="section-divider mt-4" style="background:linear-gradient(90deg,#6D28D9,#F59E0B)"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="v-feature-card fade-up">
+            <div class="v-feature-icon" style="background:#F5F3FF">
+              <svg class="w-6 h-6" style="color:var(--v-violet)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">Design professionnel</span><span data-lang="ar">&#1578;&#1589;&#1605;&#1610;&#1605; &#1575;&#1581;&#1578;&#1585;&#1575;&#1601;&#1610;</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Cr&#233;&#233; avec l&#8217;IA et valid&#233; par un expert. Unique &#224; votre marque.</span><span data-lang="ar">&#1605;&#1589;&#1605;&#1617;&#1605; &#1576;&#1575;&#1604;&#1584;&#1603;&#1575;&#1569; &#1575;&#1604;&#1575;&#1589;&#1591;&#1606;&#1575;&#1593;&#1610; &#1608;&#1605;&#1593;&#1578;&#1605;&#1583; &#1605;&#1606; &#1582;&#1576;&#1610;&#1585;. &#1601;&#1585;&#1610;&#1583; &#1604;&#1593;&#1604;&#1575;&#1605;&#1578;&#1603;.</span></p>
+          </div>
+          <div class="v-feature-card fade-up delay-100">
+            <div class="v-feature-icon" style="background:#FEF3C7">
+              <svg class="w-6 h-6" style="color:var(--v-amber)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">SEO Google int&#233;gr&#233;</span><span data-lang="ar">SEO Google &#1605;&#1583;&#1605;&#1580;</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Vos clients vous trouvent sur Google d&#232;s le premier jour.</span><span data-lang="ar">&#1593;&#1605;&#1604;&#1575;&#1572;&#1603; &#1610;&#1580;&#1583;&#1608;&#1606;&#1603; &#1593;&#1604;&#1609; Google &#1605;&#1606; &#1575;&#1604;&#1610;&#1608;&#1605; &#1575;&#1604;&#1571;&#1608;&#1604;.</span></p>
+          </div>
+          <div class="v-feature-card fade-up delay-200">
+            <div class="v-feature-icon" style="background:#ECFDF5">
+              <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">H&#233;bergement 1 an</span><span data-lang="ar">&#1575;&#1587;&#1578;&#1590;&#1575;&#1601;&#1577; &#1587;&#1606;&#1577; &#1603;&#1575;&#1605;&#1604;&#1577;</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Serveur rapide et s&#233;curis&#233;, sans frais suppl&#233;mentaires.</span><span data-lang="ar">&#1587;&#1610;&#1585;&#1601;&#1585; &#1587;&#1585;&#1610;&#1593; &#1608;&#1570;&#1605;&#1606;&#1548; &#1576;&#1583;&#1608;&#1606; &#1605;&#1589;&#1575;&#1585;&#1610;&#1601; &#1573;&#1590;&#1575;&#1601;&#1610;&#1577;.</span></p>
+          </div>
+          <div class="v-feature-card fade-up">
+            <div class="v-feature-icon" style="background:#F5F3FF">
+              <svg class="w-6 h-6" style="color:var(--v-violet)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 003 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">Domaine + SSL</span><span data-lang="ar">&#1583;&#1608;&#1605;&#1610;&#1606; + SSL</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Votre nom de domaine .com/.ma + certificat de s&#233;curit&#233;.</span><span data-lang="ar">&#1575;&#1587;&#1605; &#1606;&#1591;&#1575;&#1602;&#1603; .com/.ma + &#1588;&#1607;&#1575;&#1583;&#1577; &#1571;&#1605;&#1575;&#1606;.</span></p>
+          </div>
+          <div class="v-feature-card fade-up delay-100">
+            <div class="v-feature-icon" style="background:#DCFCE7">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">Bouton WhatsApp</span><span data-lang="ar">&#1586;&#1585; &#1608;&#1575;&#1578;&#1587;&#1575;&#1576;</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Vos visiteurs vous contactent en 1 clic via WhatsApp.</span><span data-lang="ar">&#1586;&#1608;&#1575;&#1585;&#1603; &#1610;&#1578;&#1608;&#1575;&#1589;&#1604;&#1608;&#1606; &#1605;&#1593;&#1603; &#1576;&#1606;&#1602;&#1585;&#1577; &#1608;&#1575;&#1581;&#1583;&#1577;.</span></p>
+          </div>
+          <div class="v-feature-card fade-up delay-200">
+            <div class="v-feature-icon" style="background:#FEF3C7">
+              <svg class="w-6 h-6" style="color:var(--v-amber)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1"><span data-lang="fr">100% responsive</span><span data-lang="ar">100% &#1605;&#1578;&#1580;&#1575;&#1608;&#1576;</span></h3>
+            <p class="text-gray-500 text-sm"><span data-lang="fr">Parfait sur mobile, tablette et ordinateur.</span><span data-lang="ar">&#1605;&#1579;&#1575;&#1604;&#1610; &#1593;&#1604;&#1609; &#1575;&#1604;&#1605;&#1608;&#1576;&#1575;&#1610;&#1604; &#1608;&#1575;&#1604;&#1578;&#1575;&#1576;&#1604;&#1578; &#1608;&#1575;&#1604;&#1603;&#1605;&#1576;&#1610;&#1608;&#1578;&#1585;.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL PROJECTS -->
+    <section id="v-projects" class="py-16 sm:py-20 bg-gray-50" aria-labelledby="proj-h2">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="proj-h2" class="section-title fade-up">
+            <span data-lang="fr">Des projets <span class="text-violet-grad">r&#233;els</span></span>
+            <span data-lang="ar">&#1605;&#1588;&#1575;&#1585;&#1610;&#1593; <span class="text-violet-grad">&#1581;&#1602;&#1610;&#1602;&#1610;&#1577;</span></span>
+          </h2>
+          <div class="section-divider mt-4" style="background:linear-gradient(90deg,#6D28D9,#F59E0B)"></div>
+          <p class="text-gray-500 mt-4 max-w-xl mx-auto fade-up delay-100">
+            <span data-lang="fr">Pas des maquettes. Des sites en production visit&#233;s par de vrais clients.</span>
+            <span data-lang="ar">&#1604;&#1610;&#1587;&#1578; &#1606;&#1605;&#1575;&#1584;&#1580;. &#1605;&#1608;&#1575;&#1602;&#1593; &#1601;&#1593;&#1604;&#1610;&#1577; &#1610;&#1586;&#1608;&#1585;&#1607;&#1575; &#1593;&#1605;&#1604;&#1575;&#1569; &#1581;&#1602;&#1610;&#1602;&#1610;&#1608;&#1606;.</span>
+          </p>
+        </div>
+        <div id="v-projects-grid" class="grid sm:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ROI CALCULATOR -->
+    <section class="py-16 sm:py-20 bg-white" aria-labelledby="roi-h2">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="roi-h2" class="section-title fade-up">
+            <span data-lang="fr">Calculez vos <span class="text-violet-grad">&#233;conomies</span></span>
+            <span data-lang="ar">&#1575;&#1581;&#1587;&#1576; <span class="text-violet-grad">&#1605;&#1575; &#1587;&#1578;&#1608;&#1601;&#1617;&#1585;&#1607;</span></span>
+          </h2>
+          <div class="section-divider mt-4" style="background:linear-gradient(90deg,#6D28D9,#F59E0B)"></div>
+          <p class="text-gray-500 mt-4 max-w-xl mx-auto fade-up delay-100">
+            <span data-lang="fr">Comparez le devis d&#8217;une agence classique avec notre offre.</span>
+            <span data-lang="ar">&#1602;&#1575;&#1585;&#1606; &#1593;&#1585;&#1590; &#1608;&#1603;&#1575;&#1604;&#1577; &#1578;&#1602;&#1604;&#1610;&#1583;&#1610;&#1577; &#1605;&#1593; &#1593;&#1585;&#1590;&#1606;&#1575;.</span>
+          </p>
+        </div>
+        <div class="v-calc fade-up delay-200">
+          <div class="grid sm:grid-cols-2 gap-6 mb-8">
+            <div>
+              <label for="roi-price" class="block text-sm font-semibold text-gray-700 mb-2">
+                <span data-lang="fr">Devis agence classique (DH)</span>
+                <span data-lang="ar">&#1593;&#1585;&#1590; &#1587;&#1593;&#1585; &#1575;&#1604;&#1608;&#1603;&#1575;&#1604;&#1577; (&#1583;&#1585;&#1607;&#1605;)</span>
+              </label>
+              <input type="number" id="roi-price" class="form-input" value="20000" min="5000" step="1000" dir="ltr" />
+            </div>
+            <div>
+              <label for="roi-weeks" class="block text-sm font-semibold text-gray-700 mb-2">
+                <span data-lang="fr">D&#233;lai estim&#233; (semaines)</span>
+                <span data-lang="ar">&#1575;&#1604;&#1605;&#1583;&#1577; &#1575;&#1604;&#1605;&#1602;&#1583;&#1617;&#1585;&#1577; (&#1576;&#1575;&#1604;&#1571;&#1587;&#1575;&#1576;&#1610;&#1593;)</span>
+              </label>
+              <input type="number" id="roi-weeks" class="form-input" value="4" min="1" max="52" dir="ltr" />
+            </div>
+          </div>
+          <div class="v-calc-result" id="roi-result">
+            <p class="text-purple-200 text-sm mb-1"><span data-lang="fr">Vous &#233;conomisez</span><span data-lang="ar">&#1578;&#1608;&#1601;&#1617;&#1585;</span></p>
+            <div class="text-4xl font-black text-white mb-1" dir="ltr" id="roi-savings">15 000 DH</div>
+            <p class="text-purple-200 text-sm">
+              <span data-lang="fr">et <strong class="text-white" id="roi-days">27 jours</strong> de temps gagn&#233;</span>
+              <span data-lang="ar">&#1608;<strong class="text-white" id="roi-days-ar">27 &#1610;&#1608;&#1605;&#1611;&#1575;</strong> &#1605;&#1606; &#1575;&#1604;&#1608;&#1602;&#1578; &#1575;&#1604;&#1605;&#1608;&#1601;&#1617;&#1585;</span>
+            </p>
+          </div>
+          <p class="text-center text-xs text-gray-500 mt-4">
+            <span data-lang="fr">Notre prix fixe&#160;: 5&#160;000&#160;DH &#183; Notre d&#233;lai garanti&#160;: 24H maximum</span>
+            <span data-lang="ar">&#1587;&#1593;&#1585;&#1606;&#1575; &#1575;&#1604;&#1579;&#1575;&#1576;&#1578;: 5,000 &#1583;&#1585;&#1607;&#1605; &#183; &#1571;&#1580;&#1604;&#1606;&#1575; &#1575;&#1604;&#1605;&#1590;&#1605;&#1608;&#1606;: 24 &#1587;&#1575;&#1593;&#1577; &#1603;&#1581;&#1583; &#1571;&#1602;&#1589;&#1609;</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-16 sm:py-20 bg-gray-50" aria-labelledby="proc-h2">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 id="proc-h2" class="section-title fade-up">
+            <span data-lang="fr">Comment &#231;a <span class="text-violet-grad">marche</span></span>
+            <span data-lang="ar">&#1603;&#1610;&#1601; <span class="text-violet-grad">&#1610;&#1593;&#1605;&#1604;</span></span>
+          </h2>
+          <div class="section-divider mt-4" style="background:linear-gradient(90deg,#6D28D9,#F59E0B)"></div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center fade-up">
+            <div class="v-step-dot">1</div>
+            <h3 class="font-bold text-gray-900 text-sm mb-1"><span data-lang="fr">Formulaire</span><span data-lang="ar">&#1575;&#1604;&#1575;&#1587;&#1578;&#1605;&#1575;&#1585;&#1577;</span></h3>
+            <p class="text-gray-500 text-xs"><span data-lang="fr">30 secondes. On vous rappelle sous 30 min.</span><span data-lang="ar">30 &#1579;&#1575;&#1606;&#1610;&#1577;. &#1606;&#1593;&#1575;&#1608;&#1583; &#1575;&#1604;&#1575;&#1578;&#1589;&#1575;&#1604; &#1582;&#1604;&#1575;&#1604; 30 &#1583;&#1602;&#1610;&#1602;&#1577;.</span></p>
+          </div>
+          <div class="text-center fade-up delay-100">
+            <div class="v-step-dot">2</div>
+            <h3 class="font-bold text-gray-900 text-sm mb-1"><span data-lang="fr">Votre contenu</span><span data-lang="ar">&#1605;&#1581;&#1578;&#1608;&#1575;&#1603;</span></h3>
+            <p class="text-gray-500 text-xs"><span data-lang="fr">Logo, textes, photos via un guide simple.</span><span data-lang="ar">&#1588;&#1593;&#1575;&#1585;&#1548; &#1606;&#1589;&#1608;&#1589;&#1548; &#1589;&#1608;&#1585; &#1593;&#1576;&#1585; &#1583;&#1604;&#1610;&#1604; &#1576;&#1587;&#1610;&#1591;.</span></p>
+          </div>
+          <div class="text-center fade-up delay-200">
+            <div class="v-step-dot">3</div>
+            <h3 class="font-bold text-gray-900 text-sm mb-1"><span data-lang="fr">On construit</span><span data-lang="ar">&#1606;&#1576;&#1606;&#1610;</span></h3>
+            <p class="text-gray-500 text-xs"><span data-lang="fr">IA + expertise humaine. Tests multi-appareils.</span><span data-lang="ar">&#1584;&#1603;&#1575;&#1569; &#1575;&#1589;&#1591;&#1606;&#1575;&#1593;&#1610; + &#1582;&#1576;&#1585;&#1577; &#1576;&#1588;&#1585;&#1610;&#1577;.</span></p>
+          </div>
+          <div class="text-center fade-up delay-300">
+            <div class="v-step-dot" style="background:var(--v-amber)">4</div>
+            <h3 class="font-bold text-gray-900 text-sm mb-1"><span data-lang="fr">En ligne&#160;!</span><span data-lang="ar">&#1605;&#1576;&#1575;&#1588;&#1585;&#160;!</span></h3>
+            <p class="text-gray-500 text-xs"><span data-lang="fr">Domaine, SSL, formation incluse.</span><span data-lang="ar">&#1583;&#1608;&#1605;&#1610;&#1606;&#1548; SSL&#1548; &#1578;&#1583;&#1585;&#1610;&#1576; &#1605;&#1588;&#1605;&#1608;&#1604;.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 sm:py-20 bg-white" aria-labelledby="testi-h2">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="testi-h2" class="section-title fade-up">
+            <span data-lang="fr">Ils nous font <span class="text-violet-grad">confiance</span></span>
+            <span data-lang="ar">&#1610;&#1579;&#1602;&#1608;&#1606; <span class="text-violet-grad">&#1576;&#1606;&#1575;</span></span>
+          </h2>
+          <div class="section-divider mt-4" style="background:linear-gradient(90deg,#6D28D9,#F59E0B)"></div>
+        </div>
+        <div id="v-testimonials-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section id="v-form" class="v-cta-bg py-16 sm:py-20" aria-labelledby="form-h2">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+
+          <!-- Left value recap -->
+          <div class="text-white fade-up">
+            <h2 id="form-h2" class="text-3xl sm:text-4xl font-black mb-4">
+              <span data-lang="fr">Pr&#234;t &#224; lancer votre site&#160;?</span>
+              <span data-lang="ar">&#1605;&#1587;&#1578;&#1593;&#1583; &#1604;&#1573;&#1591;&#1604;&#1575;&#1602; &#1605;&#1608;&#1602;&#1593;&#1603;&#1567;</span>
+            </h2>
+            <p class="text-gray-300 mb-8 leading-relaxed">
+              <span data-lang="fr">Remplissez le formulaire. Nous vous contactons sous 30&#160;min via WhatsApp. Aucun engagement, aucun paiement.</span>
+              <span data-lang="ar">&#1575;&#1605;&#1604;&#1571; &#1575;&#1604;&#1575;&#1587;&#1578;&#1605;&#1575;&#1585;&#1577;. &#1606;&#1578;&#1608;&#1575;&#1589;&#1604; &#1605;&#1593;&#1603; &#1582;&#1604;&#1575;&#1604; 30 &#1583;&#1602;&#1610;&#1602;&#1577;. &#1604;&#1575; &#1575;&#1604;&#1578;&#1586;&#1575;&#1605;&#1548; &#1604;&#1575; &#1583;&#1601;&#1593;.</span>
+            </p>
+            <div class="space-y-3 mb-8">
+              <div class="v-value-card">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(139,92,246,.2)">
+                  <svg class="w-5 h-5" style="color:var(--v-violet-light)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <p class="font-bold text-white text-sm"><span data-lang="fr">5&#160;000&#160;DH &#8212; tout inclus</span><span data-lang="ar">5,000 &#1583;&#1585;&#1607;&#1605; &#8212; &#1588;&#1575;&#1605;&#1604; &#1603;&#1604; &#1588;&#1610;&#1569;</span></p>
+                  <p class="text-gray-400 text-xs"><span data-lang="fr">Z&#233;ro frais cach&#233;s</span><span data-lang="ar">&#1576;&#1583;&#1608;&#1606; &#1585;&#1587;&#1608;&#1605; &#1605;&#1582;&#1601;&#1610;&#1577;</span></p>
+                </div>
+              </div>
+              <div class="v-value-card">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(245,158,11,.2)">
+                  <svg class="w-5 h-5" style="color:var(--v-amber)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <p class="font-bold text-white text-sm"><span data-lang="fr">Livr&#233; en 24H &#8212; garanti</span><span data-lang="ar">&#1610;&#1615;&#1587;&#1604;&#1617;&#1605; &#1601;&#1610; 24 &#1587;&#1575;&#1593;&#1577; &#8212; &#1605;&#1590;&#1605;&#1608;&#1606;</span></p>
+                  <p class="text-gray-400 text-xs"><span data-lang="fr">Sinon votre site est offert</span><span data-lang="ar">&#1608;&#1573;&#1604;&#1575; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1605;&#1580;&#1575;&#1606;&#1610;</span></p>
+                </div>
+              </div>
+              <div class="v-value-card">
+                <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(139,92,246,.2)">
+                  <svg class="w-5 h-5" style="color:var(--v-violet-light)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <p class="font-bold text-white text-sm"><span data-lang="fr">Aper&#231;u avant paiement</span><span data-lang="ar">&#1605;&#1593;&#1575;&#1610;&#1606;&#1577; &#1602;&#1576;&#1604; &#1575;&#1604;&#1583;&#1601;&#1593;</span></p>
+                  <p class="text-gray-400 text-xs"><span data-lang="fr">R&#233;visions illimit&#233;es incluses</span><span data-lang="ar">&#1605;&#1585;&#1575;&#1580;&#1593;&#1575;&#1578; &#1594;&#1610;&#1585; &#1605;&#1581;&#1583;&#1608;&#1583;&#1577; &#1605;&#1588;&#1605;&#1608;&#1604;&#1577;</span></p>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27offre%20site%20web%2024H%20!"
+               class="btn-whatsapp inline-flex" target="_blank" rel="noopener noreferrer">
+              <span data-lang="fr">Discuter sur WhatsApp</span>
+              <span data-lang="ar">&#1578;&#1581;&#1583;&#1579; &#1605;&#1593;&#1606;&#1575; &#1593;&#1604;&#1609; &#1608;&#1575;&#1578;&#1587;&#1575;&#1576;</span>
+            </a>
+          </div>
+
+          <!-- Right form -->
+          <div class="v-form-wrap fade-up delay-100">
+            <div class="v-form">
+              <h3 class="font-bold text-xl text-gray-900 mb-1">
+                <span data-lang="fr">Demandez votre site en 24H</span>
+                <span data-lang="ar">&#1575;&#1591;&#1604;&#1576; &#1605;&#1608;&#1602;&#1593;&#1603; &#1601;&#1610; 24 &#1587;&#1575;&#1593;&#1577;</span>
+              </h3>
+              <p class="text-gray-500 text-sm mb-6">
+                <span data-lang="fr">+ Guide offert&#160;: <em>&#171;&#160;10 astuces pour attirer des clients en ligne&#160;&#187;</em></span>
+                <span data-lang="ar">+ &#1583;&#1604;&#1610;&#1604; &#1605;&#1580;&#1575;&#1606;&#1610;: <em>&#171;10 &#1606;&#1589;&#1575;&#1574;&#1581; &#1604;&#1580;&#1584;&#1576; &#1575;&#1604;&#1593;&#1605;&#1604;&#1575;&#1569; &#1593;&#1576;&#1585; &#1575;&#1604;&#1573;&#1606;&#1578;&#1585;&#1606;&#1578;&#187;</em></span>
+              </p>
+              <form id="v-lead-form" class="space-y-4" novalidate>
+                <div>
+                  <label for="v-name" class="block text-sm font-medium text-gray-700 mb-1"><span data-lang="fr">Nom complet *</span><span data-lang="ar">&#1575;&#1604;&#1575;&#1587;&#1605; &#1575;&#1604;&#1603;&#1575;&#1605;&#1604; *</span></label>
+                  <input type="text" id="v-name" name="name" required autocomplete="name" class="form-input" data-ph-fr="ex: Ahmed Benali" data-ph-ar="&#1605;&#1579;&#1575;&#1604;: &#1571;&#1581;&#1605;&#1583; &#1576;&#1606;&#1593;&#1604;&#1610;" placeholder="ex: Ahmed Benali" />
+                </div>
+                <div>
+                  <label for="v-phone" class="block text-sm font-medium text-gray-700 mb-1"><span data-lang="fr">WhatsApp *</span><span data-lang="ar">&#1608;&#1575;&#1578;&#1587;&#1575;&#1576; *</span></label>
+                  <input type="tel" id="v-phone" name="phone" required autocomplete="tel" class="form-input" dir="ltr" placeholder="+212 6XX XXX XXX" />
+                </div>
+                <div>
+                  <label for="v-city" class="block text-sm font-medium text-gray-700 mb-1"><span data-lang="fr">Ville *</span><span data-lang="ar">&#1575;&#1604;&#1605;&#1583;&#1610;&#1606;&#1577; *</span></label>
+                  <input type="text" id="v-city" name="city" required class="form-input" data-ph-fr="ex: Casablanca" data-ph-ar="&#1605;&#1579;&#1575;&#1604;: &#1575;&#1604;&#1583;&#1575;&#1585; &#1575;&#1604;&#1576;&#1610;&#1590;&#1575;&#1569;" placeholder="ex: Casablanca" />
+                </div>
+                <div>
+                  <label for="v-business" class="block text-sm font-medium text-gray-700 mb-1"><span data-lang="fr">Votre activit&#233; *</span><span data-lang="ar">&#1606;&#1588;&#1575;&#1591;&#1603; &#1575;&#1604;&#1578;&#1580;&#1575;&#1585;&#1610; *</span></label>
+                  <select id="v-business" name="business" required class="form-input">
+                    <option value="" disabled selected>&#8212;</option>
+                    <option value="restaurant">Restaurant / Caf&#233;</option>
+                    <option value="commerce">Commerce / Boutique</option>
+                    <option value="services">Services (comptable, avocat&#8230;)</option>
+                    <option value="artisan">Artisan / Freelance</option>
+                    <option value="sante">Sant&#233; (m&#233;decin, pharmacie&#8230;)</option>
+                    <option value="immobilier">Immobilier</option>
+                    <option value="btp">BTP / Construction</option>
+                    <option value="industrie">Industrie</option>
+                    <option value="education">&#201;ducation / Formation</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="v-email" class="block text-sm font-medium text-gray-700 mb-1"><span data-lang="fr">Email (optionnel)</span><span data-lang="ar">&#1575;&#1604;&#1576;&#1585;&#1610;&#1583; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610; (&#1575;&#1582;&#1578;&#1610;&#1575;&#1585;&#1610;)</span></label>
+                  <input type="email" id="v-email" name="email" autocomplete="email" class="form-input" data-ph-fr="votre@email.com" data-ph-ar="&#1576;&#1585;&#1610;&#1583;&#1603;@email.com" placeholder="votre@email.com" />
+                </div>
+                <button type="submit" class="btn-violet w-full justify-center text-base mt-2">
+                  <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  <span data-lang="fr">Envoyer ma demande &#8212; Gratuit</span>
+                  <span data-lang="ar">&#1573;&#1585;&#1587;&#1575;&#1604; &#1591;&#1604;&#1576;&#1610; &#8212; &#1605;&#1580;&#1575;&#1606;&#1611;&#1575;</span>
+                </button>
+                <p class="text-xs text-gray-400 text-center">
+                  <span data-lang="fr">&#128274; Vos donn&#233;es sont prot&#233;g&#233;es. Contact uniquement via WhatsApp.</span>
+                  <span data-lang="ar">&#128274; &#1576;&#1610;&#1575;&#1606;&#1575;&#1578;&#1603; &#1605;&#1581;&#1605;&#1610;&#1577;. &#1575;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604; &#1601;&#1602;&#1591; &#1593;&#1576;&#1585; &#1608;&#1575;&#1578;&#1587;&#1575;&#1576;.</span>
+                </p>
+              </form>
+            </div>
+            <div class="v-success" id="v-success">
+              <svg class="w-14 h-14 mx-auto mb-4" style="color:var(--v-violet)" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <h3 class="font-bold text-xl text-gray-900 mb-2"><span data-lang="fr">Demande re&#231;ue&#160;!</span><span data-lang="ar">&#1578;&#1605; &#1575;&#1587;&#1578;&#1604;&#1575;&#1605; &#1575;&#1604;&#1591;&#1604;&#1576;!</span></h3>
+              <p class="text-gray-600 mb-6"><span data-lang="fr">Nous vous contactons sous 30 minutes sur WhatsApp.</span><span data-lang="ar">&#1587;&#1606;&#1578;&#1608;&#1575;&#1589;&#1604; &#1605;&#1593;&#1603; &#1582;&#1604;&#1575;&#1604; 30 &#1583;&#1602;&#1610;&#1602;&#1577; &#1593;&#1576;&#1585; &#1608;&#1575;&#1578;&#1587;&#1575;&#1576;.</span></p>
+              <a href="https://wa.me/212698921518?text=Bonjour%2C%20j%27ai%20soumis%20le%20formulaire%20offre%2024H%20!"
+                 class="btn-whatsapp justify-center" target="_blank" rel="noopener noreferrer">
+                <span data-lang="fr">Nous &#233;crire sur WhatsApp</span>
+                <span data-lang="ar">&#1585;&#1575;&#1587;&#1604;&#1606;&#1575; &#1593;&#1604;&#1609; &#1608;&#1575;&#1578;&#1587;&#1575;&#1576;</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0F0F1A] text-white py-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="toukrichtemed" class="h-8 w-auto" loading="lazy" />
+          <span class="font-bold text-lg">toukrichtemed</span>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://wa.me/212698921518" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            +212 698 921 518
+          </a>
+          <a href="mailto:toukrichtemed@gmail.com" class="text-gray-400 hover:text-white transition-colors text-sm">toukrichtemed@gmail.com</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-6 pt-6 text-center text-xs text-gray-500">
+        <span data-lang="fr">&#169; 2026 toukrichtemed. Tous droits r&#233;serv&#233;s.</span>
+        <span data-lang="ar">&#169; 2026 toukrichtemed. &#1580;&#1605;&#1610;&#1593; &#1575;&#1604;&#1581;&#1602;&#1608;&#1602; &#1605;&#1581;&#1601;&#1608;&#1592;&#1577;.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/212698921518?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27offre%20site%20web%2024H%20!"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+     aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=2"></script>
+  <script src="js/portfolio-projects.js?v=1"></script>
+  <script src="js/testimonials-lp.js?v=1"></script>
+  <script>
+  /* ---- Project cards ---- */
+  (function () {
+    var grid = document.getElementById('v-projects-grid');
+    if (!grid || typeof PORTFOLIO_PROJECTS === 'undefined') return;
+    var delays = ['fade-up', 'fade-up delay-100', 'fade-up delay-200', 'fade-up delay-300'];
+    PORTFOLIO_PROJECTS.forEach(function (p, i) {
+      if (!p.image) return;
+      var card = document.createElement('div');
+      card.className = 'v-project bg-white ' + (delays[i] || 'fade-up');
+      card.innerHTML =
+        '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer" aria-label="' + p.ariaLabel + '">' +
+          '<img src="' + p.image + '" alt="' + p.imageAlt + '" loading="lazy"/>' +
+        '</a>' +
+        '<div class="p-5">' +
+          '<div class="flex items-center justify-between mb-2">' +
+            '<span class="' + p.badgeClass + '">' +
+              '<span data-lang="fr">' + p.badge.fr + '</span>' +
+              '<span data-lang="ar">' + p.badge.ar + '</span>' +
+            '</span>' +
+            '<span class="text-xs font-semibold" style="color:var(--v-violet)">' +
+              '<span data-lang="fr">' + p.delivery.fr + '</span>' +
+              '<span data-lang="ar">' + p.delivery.ar + '</span>' +
+            '</span>' +
+          '</div>' +
+          '<h3 class="font-bold text-gray-900 mb-1 text-sm">' +
+            '<span data-lang="fr">' + p.title.fr + '</span>' +
+            '<span data-lang="ar">' + p.title.ar + '</span>' +
+          '</h3>' +
+          '<p class="text-gray-600 text-xs leading-relaxed">' +
+            '<span data-lang="fr">' + p.description.fr + '</span>' +
+            '<span data-lang="ar">' + p.description.ar + '</span>' +
+          '</p>' +
+        '</div>';
+      grid.appendChild(card);
+    });
+    var lang = document.documentElement.lang || 'fr';
+    grid.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    });
+    if (typeof initScrollAnimations === 'function') initScrollAnimations();
+  }());
+
+  /* ---- Testimonials ---- */
+  (function () {
+    var grid = document.getElementById('v-testimonials-grid');
+    if (!grid || typeof LP_TESTIMONIALS === 'undefined' || typeof buildCard === 'undefined') return;
+    grid.innerHTML = LP_TESTIMONIALS.map(buildCard).join('');
+    var lang = document.documentElement.lang || 'fr';
+    grid.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    });
+    if (typeof initScrollAnimations === 'function') initScrollAnimations();
+  }());
+
+  /* ---- ROI Calculator ---- */
+  (function () {
+    var priceEl = document.getElementById('roi-price');
+    var weeksEl = document.getElementById('roi-weeks');
+    if (!priceEl || !weeksEl) return;
+    function calc() {
+      var price   = Math.max(0, parseInt(priceEl.value) || 0);
+      var weeks   = Math.max(1, parseInt(weeksEl.value) || 1);
+      var savings = Math.max(0, price - 5000);
+      var days    = Math.max(0, weeks * 7 - 1);
+      document.getElementById('roi-savings').textContent = savings.toLocaleString('fr-FR') + ' DH';
+      var dFr = document.getElementById('roi-days');
+      var dAr = document.getElementById('roi-days-ar');
+      if (dFr) dFr.textContent = days + ' jours';
+      if (dAr) dAr.textContent = days + ' \u064a\u0648\u0645\u064b\u0627';
+    }
+    priceEl.addEventListener('input', calc);
+    weeksEl.addEventListener('input', calc);
+    calc();
+  }());
+
+  /* ---- Form submit ---- */
+  (function () {
+    var form = document.getElementById('v-lead-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var lang     = document.documentElement.lang || 'fr';
+      var name     = document.getElementById('v-name').value.trim();
+      var phone    = document.getElementById('v-phone').value.trim();
+      var city     = document.getElementById('v-city').value.trim();
+      var business = document.getElementById('v-business').value;
+      var email    = document.getElementById('v-email').value.trim();
+      if (!name || !phone || !city || !business) {
+        alert(lang === 'ar'
+          ? '\u064a\u0631\u062c\u0649 \u0645\u0644\u0621 \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628\u0629 (*)'
+          : 'Veuillez remplir tous les champs obligatoires (*)');
+        return;
+      }
+      var phoneClean = phone.replace(/[\s\-\(\)]/g, '');
+      if (phoneClean.length < 9) {
+        alert(lang === 'ar'
+          ? '\u064a\u0631\u062c\u0649 \u0625\u062f\u062e\u0627\u0644 \u0631\u0642\u0645 \u0647\u0627\u062a\u0641 \u0635\u062d\u064a\u062d'
+          : 'Veuillez entrer un num\u00e9ro de t\u00e9l\u00e9phone valide');
+        return;
+      }
+      var msg;
+      if (lang === 'ar') {
+        msg = '\u0645\u0631\u062d\u0628\u0627\u064b\u060c \u0623\u0646\u0627 \u0645\u0647\u062a\u0645 \u0628\u0639\u0631\u0636 \u0627\u0644\u0645\u0648\u0642\u0639 \u0641\u064a 24 \u0633\u0627\u0639\u0629!\n\n\u0627\u0644\u0627\u0633\u0645: ' + name +
+              '\n\u0627\u0644\u0647\u0627\u062a\u0641: ' + phone + '\n\u0627\u0644\u0645\u062f\u064a\u0646\u0629: ' + city + '\n\u0627\u0644\u0646\u0634\u0627\u0637: ' + business;
+        if (email) msg += '\n\u0627\u0644\u0628\u0631\u064a\u062f: ' + email;
+      } else {
+        msg = 'Bonjour, je suis int\u00e9ress\u00e9 par l\'offre site web 24H !\n\nNom: ' + name +
+              '\nT\u00e9l\u00e9phone: ' + phone + '\nVille: ' + city + '\nActivit\u00e9: ' + business;
+        if (email) msg += '\nEmail: ' + email;
+      }
+      var wrap = form.closest('.v-form-wrap');
+      if (wrap) wrap.classList.add('submitted');
+      window.open('https://wa.me/212698921518?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+    });
+    /* Update placeholders on lang change */
+    var observer = new MutationObserver(function () {
+      var lang = document.documentElement.lang || 'fr';
+      form.querySelectorAll('[data-ph-fr]').forEach(function (el) {
+        el.placeholder = lang === 'ar'
+          ? (el.getAttribute('data-ph-ar') || '')
+          : (el.getAttribute('data-ph-fr') || '');
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  }());
+  </script>
+</body>
+</html>

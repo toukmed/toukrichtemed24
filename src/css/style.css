@@ -165,6 +165,21 @@ html[lang="ar"] .nav-link::after {
   background-clip: text;
 }
 
+/* ---- Price Shine Text ---- */
+@keyframes price-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.text-price-shine {
+  background: linear-gradient(90deg, #F59E0B 0%, #FDE68A 40%, #FFFBEB 55%, #FDE68A 70%, #F59E0B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: price-shimmer 3s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(251,191,36,0.45));
+}
+
 /* ---- Buttons ---- */
 .btn-primary {
   display: inline-flex;
@@ -552,7 +567,6 @@ html[lang="ar"] .testimonial-card {
 .counter-value {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
-  color: var(--color-primary);
   line-height: 1;
 }
 

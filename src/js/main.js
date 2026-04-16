@@ -223,6 +223,75 @@ function initSmoothScroll() {
   });
 }
 
+/* ---- Portfolio Grid (dynamic from JSON config) ---- */
+function buildCardHeader(p) {
+  if (p.type === 'image') {
+    return `<div class="relative h-52 overflow-hidden bg-gray-200">
+        <img src="${p.image}" alt="${p.imageAlt}" class="w-full h-full object-cover" loading="lazy" />
+        <div class="portfolio-card-overlay">
+          <div class="text-white">
+            <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">${p.overlayCategory.fr}</div>
+            <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="ar">${p.overlayCategory.ar}</div>
+            <div class="font-bold" data-lang="fr">${p.overlayTitle.fr}</div>
+            <div class="font-bold" data-lang="ar">${p.overlayTitle.ar}</div>
+          </div>
+        </div>
+        <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
+      </div>`;
+  }
+  return `<div class="relative h-52 overflow-hidden bg-gradient-to-br ${p.bg} flex items-center justify-center">
+      <span class="text-6xl" aria-hidden="true">${p.emoji}</span>
+      <div class="portfolio-card-overlay">
+        <div class="text-white">
+          <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="fr">${p.overlayCategory.fr}</div>
+          <div class="text-xs font-semibold text-blue-200 mb-1" data-lang="ar">${p.overlayCategory.ar}</div>
+          <div class="font-bold" data-lang="fr">${p.overlayTitle.fr}</div>
+          <div class="font-bold" data-lang="ar">${p.overlayTitle.ar}</div>
+        </div>
+      </div>
+      <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">✓ 24H</div>
+    </div>`;
+}
+
+function buildPortfolioCard(p, index) {
+  const delays = ['', 'delay-100', 'delay-200'];
+  const delay = delays[index % delays.length];
+  const linkSvg = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>`;
+
+  const article = document.createElement('article');
+  article.className = `portfolio-card fade-up${delay ? ' ' + delay : ''}`;
+  article.innerHTML = `
+    ${buildCardHeader(p)}
+    <div class="p-5">
+      <div class="flex items-center justify-between mb-2">
+        <span class="${p.badgeClass}" data-lang="fr">${p.badge.fr}</span>
+        <span class="${p.badgeClass}" data-lang="ar">${p.badge.ar}</span>
+        <span class="text-xs text-gray-400 font-mono" data-lang="fr">${p.delivery.fr}</span>
+        <span class="text-xs text-gray-400 font-mono" data-lang="ar">${p.delivery.ar}</span>
+      </div>
+      <h3 class="font-bold text-gray-900 mb-2" data-lang="fr">${p.title.fr}</h3>
+      <h3 class="font-bold text-gray-900 mb-2" data-lang="ar">${p.title.ar}</h3>
+      <p class="text-gray-600 text-sm mb-4" data-lang="fr">${p.description.fr}</p>
+      <p class="text-gray-600 text-sm mb-4" data-lang="ar">${p.description.ar}</p>
+      <a href="${p.url}" class="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1" aria-label="${p.ariaLabel}" target="_blank" rel="noopener noreferrer">
+        <span data-lang="fr">Voir le site</span><span data-lang="ar">زيارة الموقع</span>
+        ${linkSvg}
+      </a>
+    </div>`;
+  return article;
+}
+
+function initPortfolioGrid() {
+  const grid = document.getElementById('portfolio-grid');
+  if (!grid || typeof PORTFOLIO_PROJECTS === 'undefined') return;
+
+  const ctaCard = grid.querySelector('.portfolio-cta');
+  const fragment = document.createDocumentFragment();
+  PORTFOLIO_PROJECTS.forEach((project, i) => fragment.appendChild(buildPortfolioCard(project, i)));
+  grid.insertBefore(fragment, ctaCard);
+  initScrollAnimations();
+}
+
 /* ---- Init on DOM Ready ---- */
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
@@ -235,4 +304,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initContactForm();
   initSmoothScroll();
+  initPortfolioGrid();
 });
